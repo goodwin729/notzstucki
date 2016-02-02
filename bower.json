@@ -1,0 +1,22 @@
+{
+  "name": "FrontEnd",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Tim <goodwin729@yandex.ru>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "*",
+    "jquery": "2.*"
+  }
+}
