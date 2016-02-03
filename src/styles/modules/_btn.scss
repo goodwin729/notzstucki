@@ -1,0 +1,13 @@
+.btn {
+  border-radius: 0;
+  &--black {
+    background-color: $black;
+    color: $white;
+    &:visited { color: $white; }
+  }
+  &--blue {
+    background-color: $brand-color;
+    color: $white;
+    &:visited { color: $white; }
+  }
+}

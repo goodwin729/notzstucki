@@ -1,4 +1,5 @@
 node_modules/
 bower_components/
 src/.idea/
-.idea
+.idea/
+build/

@@ -1,0 +1,11 @@
+.icon {
+  display: inline-block;
+  height: $site-padding;
+  width: $site-padding;
+  &-big {
+    height: 20px;
+    width: 20px;
+  }
+  &-search { background: url( $img-dir + "/icons/search.png" ) no-repeat center center; }
+  &-share { background: url( $img-dir + "/icons/share.png" ) no-repeat center center; }
+}

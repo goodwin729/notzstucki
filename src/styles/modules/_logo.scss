@@ -1,0 +1,28 @@
+.logo {
+  display: block;
+  margin: 10px 0;
+  padding-left: 50px;
+  position: relative;
+  &:before {
+    content: "";
+    background: url( $img-dir + "logo.png" ) no-repeat left center;
+    border-right: 1px solid $gray;
+    height: 40px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 40px;
+  }
+  &-title {
+    color: $brand-color;
+    display: block;
+    font-size: 32px;
+    line-height: 30px;
+  }
+  &-subtitle {
+    display: block;
+    font-size: 9px;
+    line-height: 10px;
+    text-transform: uppercase;
+  }
+}

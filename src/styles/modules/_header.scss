@@ -1,0 +1,27 @@
+.header {
+  border-bottom: 1px solid $gray;
+  border-top: 5px solid $brand-color;
+  &-nav {
+    height: 65px;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    &-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    &-item {
+      float: left;
+    }
+    &-link {
+      font-size: 12px;
+      height: $site-padding * 4;
+      line-height: 12px;
+      min-width: $site-padding * 4;
+      padding: $site-padding;
+      text-align: left;
+      text-transform: uppercase;
+    }
+  }
+}
