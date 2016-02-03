@@ -1,4 +1,37 @@
 .title {
-  font-size: 34px;
+  font-family: $brand-font-light;
+  font-size: 32px;
   line-height: 42px;
+  margin: 0;
+  padding: $site-padding * 4 0;
+  &-border {
+    color: $gray-dark;
+    display: block;
+    font-family: $brand-font-bold;
+    font-size: 14px;
+    line-height: 15px;
+    margin: 0;
+    padding: $site-padding 0;
+    position: relative;
+    text-transform: uppercase;
+    &:before {
+      content: "";
+      background-color: $brand-color;
+      bottom: 0;
+      height: 1px;
+      left: 0;
+      position: absolute;
+      width: $site-column;
+      z-index: 5;
+    }
+    &:after {
+      content: "";
+      background-color: $gray;
+      bottom: 0;
+      height: 1px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+  }
 }

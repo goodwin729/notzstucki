@@ -1,0 +1,15 @@
+.input {
+  background-color: transparent;
+  border: 1px solid $white;
+  color: $white;
+  display: block;
+  font-size: 13px;
+  line-height: 18px;
+  padding: 10px $site-padding;
+  width: 100%;
+  & + .form-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

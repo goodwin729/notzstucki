@@ -1,0 +1,93 @@
+.footer {
+  background-color: $brand-color;
+  padding-bottom: $site-padding * 2;
+  padding-top: $site-padding * 2;
+  &-logo {
+    display: block;
+    margin-bottom: $site-padding;
+  }
+  &-text {
+    color: $brand-color-light;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 8px;
+    line-height: 12px;
+    margin: $site-padding / 2 0;
+    text-transform: uppercase;
+  }
+  &-form {
+    .form-label {
+      color: $brand-color-light;
+      text-transform: uppercase;
+    }
+  }
+  &-dot {
+    margin: $site-padding / 2 0;
+    @extend .clearfix;
+    &-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    &-item {
+      color: $white;
+      float: left;
+      font-size: 15px;
+      line-height: 20px;
+      padding: 0 $site-padding;
+      position: relative;
+      &:before {
+        content: "";
+        background-color: $white;
+        display: block;
+        height: 2px;
+        left: -1px;
+        margin-top: -1px;
+        position: absolute;
+        top: 50%;
+        width: 2px;
+      }
+      &:first-child {
+        padding-left: 0;
+        &:before {
+          display: none;
+        }
+      }
+      &:last-child { padding-right: 0; }
+    }
+    &-link {
+      color: $white;
+      font-family: $brand-font;
+    }
+  }
+  &-dash {
+    margin: $site-padding / 2 0;
+    &-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    &-item {
+      border-left: 1px solid $brand-color-light;
+      color: $white;
+      float: left;
+      font-size: 10px;
+      line-height: 14px;
+      padding: 0 $site-padding;
+      &:first-child {
+        border-left: none;
+        padding-left: 0;
+      }
+      &:last-child { padding-right: 0; }
+    }
+    &-link {
+      color: $white;
+      font-size: 13px;
+      font-family: $brand-font-bold;
+      line-height: 14px;
+    }
+    &-icon {
+      float: left;
+      margin-right: 5px;
+    }
+  }
+}

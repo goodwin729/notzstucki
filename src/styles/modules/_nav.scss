@@ -1,4 +1,5 @@
 .nav {
+  padding: $site-padding * 4 0;
   &-list {
     list-style: none;
     margin: 10px (-$site-padding / 3);
@@ -9,12 +10,20 @@
     float: left;
     padding: 0 $site-padding / 3;
     width: calc(100% / 5);
+    &.is-active {
+      .nav-link {
+        background-color: $brand-color;
+        border-color: $brand-color;
+        color: $white;
+      }
+    }
   }
   &-link {
     background-color: $white;
     border: 1px solid $gray;
     color: $gray-dark;
     display: block;
+    font-family: $brand-font-light;
     font-size: 14px;
     height: 100%;
     line-height: 18px;
@@ -25,13 +34,14 @@
     &:visited {
     }
     &:hover {
-      background-color: $brand-color;
-      border-color: $brand-color;
+      background-color: $black;
+      border-color: $black;
       color: $white;
     }
   }
   &-title {
     color: $gray-dark;
+    font-family: $brand-font-semibold;
     font-size: 14px;
     line-height: 16px;
     margin: 10px 0;

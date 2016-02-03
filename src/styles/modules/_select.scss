@@ -1,0 +1,59 @@
+.select {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  width: 100%;
+  &:before {
+    content: "";
+    border-bottom: 2px solid $brand-color;
+    border-right: 2px solid $brand-color;
+    height: 8px;
+    margin-top: -4px;
+    position: absolute;
+    right: $site-padding;
+    top: 50%;
+    width: 8px;
+    @extend .rotate-45;
+  }
+  &-value {
+    background-color: $white;
+    border: 1px solid $gray;
+    color: $gray-dark;
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+    padding: $site-padding;
+  }
+  &-drop {
+    background-color: $white;
+    border: 1px solid $gray;
+    border-top: none;
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    z-index: 50;
+    &-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    &-item {
+    }
+    &-link {
+      color: $gray-dark;
+      display: block;
+      font-size: 14px;
+      line-height: 18px;
+      padding: $site-padding;
+      &:hover {
+        background-color: $brand-color;
+        color: $white;
+      }
+    }
+  }
+  &.is-active {
+    .select-drop { display: block; }
+  }
+}

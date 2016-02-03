@@ -1,40 +1,40 @@
 @font-face {
-  font-family: 'LindenHill-reg';
-  src: url('../fonts/linden_hill-reg.eot');
-  src: url('../fonts/linden_hill-reg.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/linden_hill-reg.woff2') format('woff2'),
-       url('../fonts/linden_hill-reg.woff') format('woff'),
-       url('../fonts/linden_hill-reg.ttf') format('truetype');
+  font-family: 'Opensans-regular';
+  src: url('../fonts/opensans-regular.eot');
+  src: url('../fonts/opensans-regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/opensans-regular.woff2') format('woff2'),
+  url('../fonts/opensans-regular.woff') format('woff'),
+  url('../fonts/opensans-regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'PTSansNarrow-reg';
-  src: url('../fonts/ptsans_narrow-reg.eot');
-  src: url('../fonts/ptsans_narrow-reg.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/ptsans_narrow-reg.woff2') format('woff2'),
-  url('../fonts/ptsans_narrow-reg.woff') format('woff'),
-  url('../fonts/ptsans_narrow-reg.ttf') format('truetype');
+  font-family: 'Opensans-bold';
+  src: url('../fonts/opensans-bold.eot');
+  src: url('../fonts/opensans-bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/opensans-bold.woff2') format('woff2'),
+       url('../fonts/opensans-bold.woff') format('woff'),
+       url('../fonts/opensans-bold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Sanday';
-  src: url('../fonts/sunday.eot');
-  src: url('../fonts/sunday.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/sunday.woff2') format('woff2'),
-  url('../fonts/sunday.woff') format('woff'),
-  url('../fonts/sunday.ttf') format('truetype');
+  font-family: 'Opensans-light';
+  src: url('../fonts/opensans-light.eot');
+  src: url('../fonts/opensans-light.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/opensans-light.woff2') format('woff2'),
+  url('../fonts/opensans-light.woff') format('woff'),
+  url('../fonts/opensans-light.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Amperzand';
-  src: url('../fonts/amperzand.eot');
-  src: url('../fonts/amperzand.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/amperzand.woff2') format('woff2'),
-  url('../fonts/amperzand.woff') format('woff'),
-  url('../fonts/amperzand.ttf') format('truetype');
+  font-family: 'Opensans-semibold';
+  src: url('../fonts/opensans-semibold.eot');
+  src: url('../fonts/opensans-semibold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/opensans-semibold.woff2') format('woff2'),
+  url('../fonts/opensans-semibold.woff') format('woff'),
+  url('../fonts/opensans-semibold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -43,10 +43,10 @@ $img-dir: "../img/";
 $border-radius-base: 0;
 
 /*----fonts----*/
-$brand-font: 'Sanday', serif;
-$brand-font-1: 'Amperzand', serif;
-$font-family-base: "LindenHill-reg", arial;
-$font-family-base-1: "PTSansNarrow-reg", arial;
+$brand-font: 'Opensans-regular', serif;
+$brand-font-bold: 'Opensans-bold', serif;
+$brand-font-light: 'Opensans-light', serif;
+$brand-font-semibold: 'Opensans-semibold', serif;
 $font-size-base: 14px;
 
 /*---general---*/
@@ -63,16 +63,17 @@ $white-dark: #f8f8f8;
 $gray-light: #eee;
 $gray: #cbcbcb;
 $gray-dark: #636464;
-$black: #272727;
+$black: #353636;
 $black-dark: #171717;
 
+$brand-color-light: #58b4f5;
 $brand-color: #007dc3;
 
 $body-bg: $white;
 
 
 body,html{
-    font-family: $font-family-base;
+    font-family: $brand-font;
     height: 100%;
     position: relative;
     -webkit-box-sizing: border-box;
@@ -90,19 +91,39 @@ body,html{
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+b,
+strong {
+  font-family: $brand-font-bold;
+}
+
+:focus::-webkit-input-placeholder {color: transparent}
+:focus::-moz-placeholder          {color: transparent}
+:focus:-moz-placeholder           {color: transparent}
+:focus:-ms-input-placeholder      {color: transparent}
+
+input[placeholder]          {text-overflow:ellipsis;}
+input::-moz-placeholder     {text-overflow:ellipsis;}
+input:-moz-placeholder      {text-overflow:ellipsis;}
+input:-ms-input-placeholder {text-overflow:ellipsis;}
+
+::-webkit-input-placeholder {color: $white; font-family: $brand-color-light; }
+::-moz-placeholder          {color: $white; font-family: $brand-color-light; }/* Firefox 19+ */
+:-moz-placeholder           {color: $white; font-family: $brand-color-light; }/* Firefox 18- */
+:-ms-input-placeholder      {color: $white; font-family: $brand-color-light; }
+
 
 body {
   a {
-    color: $black;
+    //color: $black;
     text-decoration: none;
     &:hover{
-      color: $brand-color;
+      //color: $brand-color;
       text-decoration: none;
       transition: 0.25s;
     }
     &:visited,
     &:focus {
-      color: $black;
+      //color: $black;
       text-decoration: none;
     }
     &:not(:hover) {
@@ -164,43 +185,6 @@ body {
   -webkit-filter: blur(2px);
      -moz-filter: blur(2px);
           filter: blur(2px);
-}
-.btn-style {
-  position: relative;
-  z-index: 1;
-  @extend .transition-0_5s;
-  &:before {
-    content: "";
-    border: $white 2px solid;
-    height: 100%;
-    left: 0;
-    opacity: 0.8;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: -1;
-    @extend .transition-0_5s;
-  }
-  &:after {
-    content: "";
-    background-color: $white;
-    height: calc(100% - 14px);
-    left: 7px;
-    opacity: 0.8;
-    position: absolute;
-    top: 7px;
-    width:  calc(100% - 14px);
-    z-index: -1;
-    @extend .transition-0_5s;
-  }
-  &:hover {
-    &:before {
-      border-color: $brand-color;
-    }
-    &:after {
-      background-color: $brand-color;
-    }
-  }
 }
 .rotate-45 {
   -webkit-transform: rotate(45deg);

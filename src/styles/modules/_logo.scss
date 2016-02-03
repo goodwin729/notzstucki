@@ -15,12 +15,14 @@
   }
   &-title {
     color: $brand-color;
+    font-family: $brand-font-light;
     display: block;
     font-size: 32px;
     line-height: 30px;
   }
   &-subtitle {
     display: block;
+    font-family: $brand-font-semibold;
     font-size: 9px;
     line-height: 10px;
     text-transform: uppercase;

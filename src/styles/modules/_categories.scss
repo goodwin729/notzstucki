@@ -1,0 +1,47 @@
+.categories {
+  margin: $site-padding 0;
+  &-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  &-item {
+    margin-bottom: $site-padding;
+    margin-top: $site-padding;
+    & > *:first-child { margin-top: 0; }
+    & > *:last-child { margin-bottom: 0; }
+  }
+  &-image {
+    height: 150px;
+    margin: $site-padding 0;
+    overflow: hidden;
+    &-img {
+      height: 100%;
+    }
+  }
+  &-subtitle {
+    color: $brand-color;
+    font-family: $brand-font-bold;
+    font-size: 13px;
+    line-height: 15px;
+    margin: 10px 0;
+    text-transform: uppercase;
+  }
+  &-title {
+    color: $gray-dark;
+    font-family: $brand-font-light;
+    font-size: 21px;
+    height: 50px;
+    line-height: 24px;
+    margin: 10px 0;
+    overflow: hidden;
+  }
+  &-info {
+    color: $brand-color;
+    display: block;
+    font-family: $brand-font;
+    font-size: 11px;
+    line-height: 15px;
+    margin: 10px 0;
+  }
+}

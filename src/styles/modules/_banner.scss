@@ -1,0 +1,60 @@
+.banner {
+  background-color: $brand-color;
+  overflow: hidden;
+  position: relative;
+  &-wrapper {
+    display: table;
+    height: 390px;
+  }
+  &-image {
+    left: 50%;
+    margin-left: -85px;
+    position: absolute;
+    top: 0;
+  }
+  &-description {
+    color: $white;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  &-subtitle {
+    font-family: $brand-font-bold;
+    font-size: 16px;
+    line-height: 20px;
+    margin: $site-padding 0;
+    text-transform: uppercase;
+  }
+  &-title {
+    font-family: $brand-font-light;
+    font-size: 34px;
+    line-height: 40px;
+    margin: $site-padding 0;
+  }
+  &-text {
+    font-family: $brand-font;
+    font-size: 14px;
+    line-height: 20px;
+    margin: $site-padding 0;
+  }
+  &-more {
+    color: $white;
+    font-family: $brand-font-bold;
+    font-size: 13px;
+    line-height: 20px;
+    margin: $site-padding 0;
+    position: relative;
+    text-transform: uppercase;
+    &:before {
+      content: "";
+      border-top: 2px solid $white;
+      border-right: 2px solid $white;
+      height: 8px;
+      margin-top: -4px;
+      position: absolute;
+      right: -$site-padding;
+      top: 50%;
+      width: 8px;
+      @extend .rotate-45;
+    }
+  }
+}
