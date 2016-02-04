@@ -1,0 +1,25 @@
+.share {
+  margin-bottom: $site-padding;
+  margin-top: $site-padding;
+  @extend .clearfix;
+  &-title {
+    color: $black;
+    display: block;
+    font-family: $brand-font-bold;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  &-list {
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  &-item {
+    float: left;
+    margin-left: $site-padding;
+  }
+  &-link {}
+}

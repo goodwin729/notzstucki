@@ -1,0 +1,53 @@
+.page-404 {
+  background: url( $img-dir + "404.png" ) no-repeat right bottom;
+  padding: $site-padding * 10 0;
+  @extend .clearfix;
+  &-subtitle {
+    color: $brand-color;
+    font-family: $brand-font-bold;
+    font-size: 16px;
+    line-height: 20px;
+    margin: $site-padding 0;
+    text-transform: uppercase;
+  }
+  &-title {
+    color: $black;
+    font-family: $brand-font-light;
+    font-size: 34px;
+    line-height: 40px;
+    margin: $site-padding 0;
+  }
+  &-text {
+    color: $gray;
+    font-family: $brand-font;
+    font-size: 14px;
+    line-height: 20px;
+    margin: $site-padding 0;
+  }
+  &-more {
+    color: $gray-dark;
+    font-family: $brand-font-bold;
+    font-size: 13px;
+    line-height: 20px;
+    margin: $site-padding 0;
+    margin-bottom: 0;
+    position: relative;
+    text-transform: uppercase;
+    &:before {
+      content: "";
+      border-top: 2px solid $brand-color;
+      border-right: 2px solid $brand-color;
+      height: 8px;
+      margin-top: -4px;
+      position: absolute;
+      right: -$site-padding;
+      top: 50%;
+      width: 8px;
+      @extend .rotate-45;
+    }
+    &:hover {
+      color: $brand-color;
+      &:before { border-color: $gray-dark; }
+    }
+  }
+}

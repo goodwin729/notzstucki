@@ -2,6 +2,10 @@
   background-color: $brand-color;
   overflow: hidden;
   position: relative;
+  &-content {
+    position: relative;
+    z-index: 5;
+  }
   &-wrapper {
     display: table;
     height: 390px;
@@ -42,6 +46,7 @@
     font-size: 13px;
     line-height: 20px;
     margin: $site-padding 0;
+    margin-bottom: 0;
     position: relative;
     text-transform: uppercase;
     &:before {
@@ -55,6 +60,42 @@
       top: 50%;
       width: 8px;
       @extend .rotate-45;
+    }
+  }
+  &-mirror {
+    .banner {
+      &-image {
+        left: auto;
+        margin-left: 0;
+        margin-right: -285px;
+        right: 50%;
+        &:before {
+          content: "";
+          background-color: $black;
+          height: 100%;
+          left: 0;
+          opacity: 0.4;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          z-index: 1;
+        }
+      }
+      &-more {
+        background-color: $brand-color;
+        display: inline-block;
+        line-height: 20px;
+        margin-top: 0;
+        padding: 10px $site-padding;
+        padding-right: $site-padding * 2;
+        &:before {
+          right: $site-padding;
+        }
+        &:hover {
+          background-color: $black;
+          color: $white;
+        }
+      }
     }
   }
 }

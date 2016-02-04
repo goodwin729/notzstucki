@@ -1,0 +1,75 @@
+.article {
+  padding: ($site-padding * 3) 0;
+  &-theme {
+    color: $brand-color;
+    font-family: $brand-font-bold;
+    font-size: 16px;
+    line-height: 20px;
+    margin: $site-padding 0;
+    text-transform: uppercase;
+  }
+  &-title {
+    color: $black;
+    font-family: $brand-font-light;
+    font-size: 34px;
+    line-height: 40px;
+    margin: $site-padding 0;
+  }
+  &-subtitle {
+    color: $black;
+    font-family: $brand-font-light;
+    font-size: 24px;
+    line-height: 30px;
+    margin: $site-padding 0;
+  }
+  &-text {
+    color: $gray-dark;
+    font-family: $brand-font;
+    font-size: 14px;
+    line-height: 24px;
+    margin: $site-padding 0;
+  }
+  &-image {
+    width: 100%;
+  }
+  &-back {
+    background-color: $brand-color;
+    color: $white;
+    font-family: $brand-font-bold;
+    font-size: 12px;
+    line-height: 20px;
+    margin: $site-padding 0;
+    padding: 10px $site-padding * 2;
+    padding-left: $site-padding * 3;
+    position: relative;
+    text-transform: uppercase;
+    &:before {
+      content: "";
+      border-bottom: 2px solid $white;
+      border-left: 2px solid $white;
+      height: 8px;
+      left: $site-padding * 2;
+      margin-top: -4px;
+      position: absolute;
+      top: 50%;
+      width: 8px;
+      @extend .rotate-45;
+    }
+    &:hover {
+      background-color: $black;
+      color: $white;
+    }
+  }
+  &-modules {
+    margin-top: $site-padding * 3;
+    &-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    &-item {
+      border-top: $gray 1px solid;
+      padding: $site-padding 0;
+    }
+  }
+}

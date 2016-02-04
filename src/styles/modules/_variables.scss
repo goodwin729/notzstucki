@@ -59,8 +59,8 @@ $site-padding: $grid-gutter-width / 2;
 
 /*---colors----*/
 $white: #fff;
-$white-dark: #f8f8f8;
-$gray-light: #eee;
+$white-dark: #f6f6f6;
+$gray-light: #e7e7e7;
 $gray: #cbcbcb;
 $gray-dark: #636464;
 $black: #353636;
@@ -114,6 +114,9 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 :-moz-placeholder           {color: $white; font-family: $brand-color-light; }/* Firefox 18- */
 :-ms-input-placeholder      {color: $white; font-family: $brand-color-light; }
 
+.giraffe {
+  background: url( $img-dir + "giraffe-1.png" ) no-repeat right bottom;
+}
 
 body {
   a {

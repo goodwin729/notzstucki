@@ -1,0 +1,41 @@
+.tags {
+  margin-bottom: $site-padding / 2;
+  margin-top: $site-padding / 2;
+  @extend .clearfix;
+  &-title {
+    color: $black;
+    display: block;
+    font-family: $brand-font-bold;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 10px 0;
+    text-transform: uppercase;
+  }
+  &-list {
+    list-style: none;
+    margin: 0 -$site-padding / 2;
+    padding: 0;
+    position: relative;
+  }
+  &-item {
+    float: left;
+    padding: $site-padding / 2;
+  }
+  &-link {
+    background-color: transparent;
+    border: 1px solid $gray;
+    color: $black;
+    display: block;
+    font-family: $brand-font;
+    font-size: 14px;
+    line-height: 20px;
+    min-width: 110px;
+    padding: 9px $site-padding;
+    text-align: center;
+    &:hover {
+      background-color: $brand-color;
+      border-color: $brand-color;
+      color: $white;
+    }
+  }
+}

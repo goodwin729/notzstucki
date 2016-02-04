@@ -3,9 +3,12 @@
 
 //Components
 @import "archive";
+@import "article";
+@import "author";
 @import "banner";
 @import "btn";
 @import "categories";
+@import "content";
 @import "form";
 @import "footer";
 @import "header";
@@ -15,7 +18,11 @@
 @import "nav";
 @import "news";
 @import "overview";
+@import "page-404";
+@import "related";
 @import "search";
 @import "select";
+@import "share";
+@import "tags";
 @import "theme";
 @import "title";

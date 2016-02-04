@@ -1,0 +1,20 @@
+.content {
+  background-color: $white-dark;
+  border-top: 1px solid $gray;
+  position: relative;
+  &:before {
+    content: "";
+    background-color: $gray-light;
+    border-left: 1px solid $gray;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    width: calc(50% - 277px);
+  }
+  &-article {
+    padding-left: 0;
+  }
+  .article {
+    padding-right: $site-padding * 2;
+  }
+}

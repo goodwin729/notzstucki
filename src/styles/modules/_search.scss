@@ -19,4 +19,88 @@
     height: $site-padding * 2;
     width: $site-padding * 2;
   }
+
+  &-result {
+    &-title {
+      background: url( $img-dir + "giraffe.png" ) no-repeat right bottom;
+      font-family: $brand-font-light;
+      line-height: 42px;
+      margin: 0;
+      padding: ($site-padding * 4) ($site-padding * 22) ($site-padding * 3) 0;
+    }
+    &-key {
+      color: $brand-color;
+    }
+    &-list {
+      border-top: 1px solid $gray;
+      list-style: none;
+      margin: 0;
+      margin-bottom: $site-padding * 4;
+      padding: 0;
+    }
+    &-item {
+      border-bottom: 1px solid $gray;
+      padding: $site-padding 0;
+    }
+    &-theme {
+      color: $brand-color;
+      display: block;
+      font-family: $brand-font-bold;
+      font-size: 13px;
+      line-height: 15px;
+      margin: 10px 0;
+      text-transform: uppercase;
+    }
+    &-name {
+      color: $gray-dark;
+      display: block;
+      font-family: $brand-font-light;
+      font-size: 21px;
+      line-height: 24px;
+      margin: 10px 0;
+      overflow: hidden;
+    }
+    &-date {
+      color: $brand-color;
+      display: block;
+      font-family: $brand-font;
+      font-size: 11px;
+      line-height: 15px;
+      margin: 10px 0;
+    }
+    &-text {
+      color: $gray-dark;
+      display: block;
+      font-family: $brand-font-light;
+      font-size: 14px;
+      height: 40px;
+      line-height: 20px;
+      margin: $site-padding 0;
+      overflow: hidden;
+    }
+    &-more {
+      color: $gray-dark;
+      font-family: $brand-font-bold;
+      font-size: 12px;
+      line-height: 20px;
+      position: relative;
+      text-transform: uppercase;
+      &:before {
+        content: "";
+        border-top: 2px solid $brand-color;
+        border-right: 2px solid $brand-color;
+        height: 8px;
+        margin-top: -4px;
+        position: absolute;
+        right: -$site-padding;
+        top: 50%;
+        width: 8px;
+        @extend .rotate-45;
+      }
+      &:hover {
+        color: $brand-color;
+        &:before { border-color: $gray-dark; }
+      }
+    }
+  }
 }

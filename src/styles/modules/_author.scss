@@ -1,0 +1,82 @@
+.author {
+  padding: $site-padding * 4 0;
+  text-align: center;
+  &-avatar {
+    border-radius: 50%;
+    height: 130px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    overflow: hidden;
+    width: 130px;
+    img { width: 100%; }
+  }
+  &-title {
+    color: $white;
+    display: block;
+    font-family: $brand-font-bold;
+    font-size: 13px;
+    line-height: 15px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  &-name {
+    color: $white;
+    display: block;
+    font-family: $brand-font-light;
+    font-size: 24px;
+    line-height: 30px;
+    margin: 0;
+  }
+  &-date {
+    color: $white;
+    display: block;
+    font-family: $brand-font;
+    font-size: 11px;
+    line-height: 14px;
+    margin: 0;
+    margin-top: 5px;
+  }
+  &-more {
+    color: $white;
+    display: block;
+    font-family: $brand-font-bold;
+    font-size: 10px;
+    line-height: 12px;
+    margin: 0;
+    margin-top: $site-padding * 2;
+    text-transform: uppercase;
+  }
+
+  &-share {
+    border-bottom: 1px solid $gray;
+    border-top: 1px solid $gray;
+    margin-top: $site-padding * 2;
+    padding: $site-padding / 2 0;
+    text-align: center;
+    &-list {
+      list-style: none;
+      margin: $site-padding / 2 0;
+      padding: 0;
+    }
+    &-item {
+      display: inline-block;
+      padding: 0 $site-padding / 2;
+    }
+    &-link {}
+    &-text {
+      color: $gray-dark;
+      font-family: $brand-font;
+      font-size: 11px;
+      line-height: 15px;
+      margin: $site-padding / 2 0;
+    }
+  }
+
+  &--contrast {
+    .author {
+      &-title { color: $brand-color; }
+      &-name { color: $gray-dark; }
+      &-date { color: $gray-dark; }
+    }
+  }
+}
