@@ -1,0 +1,65 @@
+.overview {
+  margin: $site-padding 0;
+  &-rubric {
+    color: $gray-dark;
+    font-family: $brand-font-light;
+    font-size: 36px;
+    line-height: 50px;
+    text-align: left;
+  }
+  &-label {
+    color: $black;
+    display: block;
+    font-family: $brand-font-bold;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  &-value {
+    color: $black;
+    display: block;
+    font-family: $brand-font;
+    font-size: 14px;
+    line-height: 18px;
+    &-up {
+      color: $green;
+      &:before { content: "+"; }
+    }
+    &-down { color: $red;
+      &:before { content: "-"; }
+    }
+  }
+  &-table {
+    &-title {
+      color: $brand-color;
+      font-family: $brand-font-bold;
+      font-size: 14px;
+      line-height: 15px;
+      padding-bottom: $site-padding;
+      padding-top: $site-padding;
+      position: relative;
+      text-align: center;
+      &:first-child {
+        color: $gray-dark;
+        text-align: left;
+        text-transform: uppercase;
+        &:before {
+          content: "";
+          background-color: $brand-color;
+          bottom: -1px;
+          height: 1px;
+          left: 0;
+          position: absolute;
+          width: $site-column;
+          z-index: 5;
+        }
+      }
+    }
+    &-item {
+      border-top: 1px solid $gray;
+      padding-bottom: $site-padding;
+      padding-top: $site-padding;
+      text-align: center;
+      &:first-child { text-align: left; }
+    }
+  }
+}

@@ -11,16 +11,44 @@
     & > *:first-child { margin-top: 0; }
     & > *:last-child { margin-bottom: 0; }
   }
+  &-link {
+    &:hover {
+      .categories {
+        &-subtitle { color: $gray-dark; }
+        &-title { color: $brand-color; }
+        &-info { color: $gray-dark; }
+        &-image {
+          &:before { opacity: 0.5; }
+        }
+      }
+    }
+  }
   &-image {
+    display: block;
     height: 150px;
     margin: $site-padding 0;
+    margin-top: 0;
     overflow: hidden;
+    position: relative;
+    &:before {
+      content: "";
+      background-color: $brand-color;
+      display: block;
+      height: 100%;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      @extend .transition-0_5s;
+    }
     &-img {
       height: 100%;
     }
   }
   &-subtitle {
     color: $brand-color;
+    display: block;
     font-family: $brand-font-bold;
     font-size: 13px;
     line-height: 15px;
@@ -29,6 +57,7 @@
   }
   &-title {
     color: $gray-dark;
+    display: block;
     font-family: $brand-font-light;
     font-size: 21px;
     height: 50px;

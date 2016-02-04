@@ -54,6 +54,15 @@
     }
   }
   &.is-active {
+    &:before {
+      content: "";
+      border: none;
+      border-left: 2px solid $brand-color;
+      border-top: 2px solid $brand-color;
+      margin-top: -4px;
+      right: $site-padding;
+      top: 50%;
+    }
     .select-drop { display: block; }
   }
 }

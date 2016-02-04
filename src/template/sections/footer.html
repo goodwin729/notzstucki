@@ -96,3 +96,16 @@
 
   </div>
 </footer>
+
+
+<script>
+  $( ".select" ).click(function(event) {
+    $(this).toggleClass( "is-active" );
+  });
+  $(document).click( function(event){
+    if( $(event.target).closest( ".select" ).length )
+      return;
+    $( ".select" ).removeClass( "is-active" );
+    event.stopPropagation();
+  });
+</script>

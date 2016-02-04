@@ -1,0 +1,135 @@
+.theme {
+  margin: $site-padding 0;
+  &-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  &-item {
+    border-bottom: 1px solid $gray;
+    padding-bottom: $site-padding;
+    padding-top: $site-padding;
+    @extend .clearfix;
+    &:hover {
+      .theme {
+        &-subtitle { color: $gray-dark; }
+        &-title { color: $brand-color; }
+        &-info { color: $gray-dark; }
+        &-image {
+          &:before { opacity: 0.5; }
+        }
+      }
+    }
+    & > *:first-child { margin-top: 0; }
+    & > *:last-child { margin-bottom: 0; }
+  }
+  &-description { overflow: hidden; }
+  &-link {
+    display: block;
+    @extend .clearfix;
+  }
+  &-image {
+    float: left;
+    display: block;
+    height: 150px;
+    margin-right: $site-padding * 2;
+    overflow: hidden;
+    position: relative;
+    width: 280px;
+    &:before {
+      content: "";
+      background-color: $brand-color;
+      display: block;
+      height: 100%;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      @extend .transition-0_5s;
+    }
+    &-img {
+      height: 100%;
+    }
+  }
+  &-subtitle {
+    color: $brand-color;
+    display: block;
+    font-family: $brand-font-bold;
+    font-size: 13px;
+    line-height: 15px;
+    margin: 10px 0;
+    text-transform: uppercase;
+  }
+  &-title {
+    color: $gray-dark;
+    display: block;
+    font-family: $brand-font-light;
+    font-size: 21px;
+    height: 50px;
+    line-height: 24px;
+    margin: 10px 0;
+    overflow: hidden;
+    width: 280px;
+  }
+  &-info {
+    color: $brand-color;
+    display: block;
+    font-family: $brand-font;
+    font-size: 11px;
+    line-height: 15px;
+    margin: 10px 0;
+  }
+  &-text {
+    color: $gray-dark;
+    display: block;
+    font-family: $brand-font-light;
+    font-size: 14px;
+    line-height: 20px;
+    margin: $site-padding 0;
+  }
+  &-more {
+    color: $gray-dark;
+    font-family: $brand-font-bold;
+    font-size: 12px;
+    line-height: 20px;
+    position: relative;
+    text-transform: uppercase;
+    &:before {
+      content: "";
+      border-top: 2px solid $brand-color;
+      border-right: 2px solid $brand-color;
+      height: 8px;
+      margin-top: -4px;
+      position: absolute;
+      right: -$site-padding;
+      top: 50%;
+      width: 8px;
+      @extend .rotate-45;
+    }
+    &:hover {
+      color: $brand-color;
+      &:before { border-color: $gray-dark; }
+    }
+  }
+  &--short {
+    .theme {
+      &-image {
+        height: 80px;
+        margin-right: $site-padding;
+        width: 100px;
+      }
+      &-title {
+        font-size: 18px;
+        height: 60px;
+        line-height: 21px;
+        margin: 0;
+        width: auto;
+      }
+      &-info {
+        margin-bottom: 5px;
+        margin-top: 5px;
+      }
+    }
+  }
+}

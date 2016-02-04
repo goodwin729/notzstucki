@@ -69,6 +69,9 @@ $black-dark: #171717;
 $brand-color-light: #58b4f5;
 $brand-color: #007dc3;
 
+$green: #8dc63f;
+$red: #d51f1c;
+
 $body-bg: $white;
 
 
@@ -162,6 +165,9 @@ body {
   }
 }
 .container {
+  @media only screen and (min-width: 1200px) {
+    padding: 0;
+  }
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
     max-width: 1024px;
     width: auto;
