@@ -5,6 +5,16 @@
   margin: 0;
   padding: $site-padding * 4 0;
   padding-right: $site-padding * 2;
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    padding-bottom: $site-padding * 2;
+    padding-right: 0;
+    padding-top: $site-padding * 2;
+  }
+  @media only screen and (max-width: 767px) {
+    font-size: 24px;
+    line-height: 30px;
+    padding: $site-padding * 2 0;
+  }
   &-border {
     color: $gray-dark;
     display: block;

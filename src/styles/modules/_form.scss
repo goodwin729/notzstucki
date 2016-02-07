@@ -1,6 +1,7 @@
 .form {
   &-field {
     margin: $site-padding 0;
+    position: relative;
     @extend .clearfix;
     &:first-child { margin-top: 0; }
   }
@@ -25,5 +26,10 @@
     line-height: 18px;
     padding: 10px 25px;
     text-transform: uppercase;
+    @extend .transition-0_5s;
+    &:hover {
+      background-color: $white;
+      color: $brand-color;
+    }
   }
 }

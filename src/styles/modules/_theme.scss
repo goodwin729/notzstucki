@@ -36,6 +36,11 @@
     overflow: hidden;
     position: relative;
     width: 270px;
+    @media only screen and (max-width: 767px) {
+      float: none;
+      margin-right: 0;
+      width: 100%;
+    }
     &:before {
       content: "";
       background-color: $brand-color;
@@ -95,6 +100,9 @@
     line-height: 20px;
     position: relative;
     text-transform: uppercase;
+    @media only screen and (max-width: 1199px) {
+      display: inline-block;
+    }
     &:before {
       content: "";
       border-top: 2px solid $brand-color;

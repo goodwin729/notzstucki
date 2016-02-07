@@ -1,11 +1,16 @@
 .header {
-  border-bottom: 1px solid $gray;
+  background-color: $white;
   border-top: 5px solid $brand-color;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 20;
   &-nav {
     height: 65px;
     position: absolute;
     right: 0;
-    top: 5px;
+    top: 0;
     &-list {
       list-style: none;
       margin: 0;
@@ -13,16 +18,24 @@
     }
     &-item {
       float: left;
+      position: relative;
     }
     &-link {
       font-size: 12px;
       font-family: $brand-font-light;
       height: $site-padding * 4;
       line-height: 12px;
-      min-width: $site-padding * 4;
-      padding: $site-padding;
-      text-align: left;
+      min-width: 65px;
+      padding: $site-padding 0;
+      text-align: center;
       text-transform: uppercase;
+      .icon { margin-top: 2px; }
+    }
+    &-mobile {
+      display: none;
+      @media only screen and (max-width: 767px) {
+        display: block;
+      }
     }
   }
 }

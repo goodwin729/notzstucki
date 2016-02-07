@@ -2,18 +2,47 @@
   display: inline-block;
   height: $site-padding;
   width: $site-padding;
+  @extend .transition-0_5s;
   &-big {
     height: 20px;
     width: 20px;
   }
-  &-globe { background: url( $img-dir + "/icons/globe.png" ) no-repeat center center; }
-  &-nsfounds { background: url( $img-dir + "/icons/nsfounds.png" ) no-repeat center center;  width: 20px;}
-  &-search { background: url( $img-dir + "/icons/search.png" ) no-repeat center center; }
+  &-globe { background: url( $img-dir + "/icons/globe.png" ) no-repeat center center;
+    &:hover { background-image: url( $img-dir + "/icons/globe-azure.png" )}
+  }
+  &-nsfounds {
+    background: url( $img-dir + "/icons/nsfounds.png" ) no-repeat center center;
+    width: 20px;
+    &:hover { background-image: url( $img-dir + "/icons/nsfounds-azure.png" ); }
+  }
+  &-search {
+    background: url( $img-dir + "/icons/search.png" ) no-repeat center center;
+    &:hover { background-image: url( $img-dir + "/icons/search-hover.png" )}
+  }
   &-share { background: url( $img-dir + "/icons/share.png" ) no-repeat center center; }
 
-  &-facebook { background: url( $img-dir + "/icons/facebook.png" ) no-repeat center center; }
-  &-googleplus { background: url( $img-dir + "/icons/googleplus.png" ) no-repeat center center; }
-  &-linkedin { background: url( $img-dir + "/icons/linkedin.png" ) no-repeat center center; }
-  &-mail { background: url( $img-dir + "/icons/mail.png" ) no-repeat center center; }
-  &-twitter { background: url( $img-dir + "/icons/twitter.png" ) no-repeat center center; }
+
+  &-facebook { background: url( $img-dir + "/icons/facebook.png" ) no-repeat center center;
+    &:hover { background-image: url( $img-dir + "/icons/facebook-black.png" ); }
+  }
+  &-googleplus { background: url( $img-dir + "/icons/googleplus.png" ) no-repeat center center;
+    &:hover { background-image: url( $img-dir + "/icons/googleplus-black.png" ); }
+  }
+  &-instagram { background: url( $img-dir + "/icons/instagram.png" ) no-repeat center center;
+    &:hover { background-image: url( $img-dir + "/icons/instagram-black.png" ); }
+  }
+  &-linkedin { background: url( $img-dir + "/icons/linkedin.png" ) no-repeat center center;
+    &:hover { background-image: url( $img-dir + "/icons/linkedin-black.png" ); }
+  }
+  &-linkedin-logo {
+    background: url( $img-dir + "/icons/linkedin-logo.png" ) no-repeat center center;
+    width: 61px;
+    &:hover { background-image: url( $img-dir + "/icons/linkedin-logo-azure.png" ); }
+  }
+  &-mail { background: url( $img-dir + "/icons/mail.png" ) no-repeat center center;
+    &:hover { background-image: url( $img-dir + "/icons/mail-black.png" ); }
+  }
+  &-twitter { background: url( $img-dir + "/icons/twitter.png" ) no-repeat center center;
+    &:hover { background-image: url( $img-dir + "/icons/twitter-black.png" ); }
+  }
 }

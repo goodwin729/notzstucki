@@ -116,9 +116,14 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
 
 .giraffe {
   background: url( $img-dir + "giraffe-1.png" ) no-repeat right bottom;
+  @media only screen and (max-width: 1199px) {
+    background: none;
+    padding-right: $site-padding;
+  }
 }
 
 body {
+  padding-top: 65px;
   a {
     //color: $black;
     text-decoration: none;
@@ -142,11 +147,18 @@ body {
       outline: none;
     }
   }
+  input,
+  textarea{
+    &:focus {
+      outline: none;
+    }
+  }
+  &.is-hidden { overflow: hidden; }
 }
 .mobile {
   &-erase {
     @media only screen and (max-width: 767px) {
-      display: none;
+      display: none !important;
     }
   }
 }

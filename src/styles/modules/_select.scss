@@ -57,12 +57,30 @@
     &:before {
       content: "";
       border: none;
-      border-left: 2px solid $brand-color;
-      border-top: 2px solid $brand-color;
+      border-left: 2px solid $gray-dark;
+      border-top: 2px solid $gray-dark;
       margin-top: -4px;
       right: $site-padding;
       top: 50%;
     }
     .select-drop { display: block; }
+  }
+  &-filter {
+    &-mobile {
+      display: none;
+      margin: 0;
+      margin-bottom: $site-padding;
+      @media only screen and (max-width: 767px) {
+        display: block;
+        margin-bottom: 0;
+      }
+      .form-label {
+        color: $gray-dark;
+        font-family: $brand-font-bold;
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+      .select-drop-item { text-transform: uppercase; }
+    }
   }
 }

@@ -1,7 +1,7 @@
 <header class="header">
   <div class="container">
 
-    <a href="#" title="" class="logo">
+    <a href="index.html" title="" class="logo">
       <span class="logo-title"><b>NS</b>cope</span>
       <span class="logo-subtitle">by Notz Stucki</span>
     </a>
@@ -10,22 +10,41 @@
       <ul class="header-nav-list">
         <li class="header-nav-item">
 
-          <button class="search search-btn header-nav-link">
+          <button class="search search-btn search-trigger header-nav-link">
               <span class="search-text">search</span>
               <i class="search-icon icon icon-big icon-search"></i>
           </button>
 
         </li>
-        <li class="header-nav-item">
+        <li class="header-nav-item mobile-erase">
           <a href="#" title="" class="header-nav-link btn btn--black">
             <i class="icon icon-big icon-share"></i>
           </a>
         </li>
-        <li class="header-nav-item">
-          <a href="#" title="" class="header-nav-link btn btn--blue">Notz<br>stucki</a>
+        <li class="header-nav-item mobile-erase">
+          <a href="#" title="" class="header-nav-link btn btn--blue">
+            <img src="img/logo-notzstucki-blue.png" alt="">
+          </a>
+        </li>
+        <li class="header-nav-item header-nav-mobile">
+          <a href="#" title="" class="header-nav-link btn btn--blue">
+            <button class="btn-mobile btn-mobile-trigger nav-mobile"></button>
+          </a>
         </li>
       </ul>
     </div>
 
   </div>
+
 </header>
+
+<div class="search search-drop">
+  <div class="container">
+
+    <div class="form-field">
+      <input type="text" class="search-drop-input" placeholder="Please enter your search term here">
+      <a href="search.html" title="" class="search-drop-btn"></a>
+    </div>
+
+  </div>
+</div>

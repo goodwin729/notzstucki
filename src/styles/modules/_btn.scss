@@ -10,4 +10,34 @@
     color: $white;
     &:visited { color: $white; }
   }
+  &-mobile {
+    background-color: $white;
+    border: none;
+    display: block;
+    height: 2px;
+    left: 50%;
+    margin-left: -$site-padding;
+    margin-top: -1px;
+    position: absolute;
+    top: 50%;
+    width: $site-padding * 2;
+    &:before {
+      content: "";
+      background-color: $white;
+      height: 2px;
+      left: 0;
+      position: absolute;
+      top: -10px;
+      width: 100%;
+    }
+    &:after {
+      content: "";
+      background-color: $white;
+      bottom: -10px;
+      height: 2px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+  }
 }

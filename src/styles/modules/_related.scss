@@ -36,6 +36,11 @@
     overflow: hidden;
     position: relative;
     width: 270px;
+    @media only screen and (max-width: 767px) {
+      float: none;
+      margin-right: 0;
+      width: auto;
+    }
     &:before {
       content: "";
       background-color: $brand-color;
@@ -68,6 +73,10 @@
       line-height: 42px;
       margin: 0;
       margin-bottom: $site-padding;
+      @media only screen and (max-width: 767px) {
+        font-size: 26px;
+        line-height: 30px;
+      }
     }
   }
   &-subtitle {

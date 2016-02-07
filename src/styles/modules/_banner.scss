@@ -2,6 +2,10 @@
   background-color: $brand-color;
   overflow: hidden;
   position: relative;
+  @extend .transition-0_5s;
+  &:hover {
+    background-color: $black;
+  }
   &-content {
     position: relative;
     z-index: 5;
@@ -9,12 +13,36 @@
   &-wrapper {
     display: table;
     height: 390px;
+    @media only screen and (max-width: 767px) {
+      height: auto;
+      padding-bottom: $site-padding * 2;
+      padding-top: $site-padding;
+    }
   }
   &-image {
     left: 50%;
     margin-left: -85px;
+    overflow: hidden;
     position: absolute;
     top: 0;
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      margin-left: 0;
+    }
+    @media only screen and (max-width: 767px) {
+      left: 0;
+      margin: 0;
+      position: relative;
+      width: 100%;
+    }
+    img {
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        margin-left: -25%;
+        position: relative;
+      }
+      @media only screen and (max-width: 767px) {
+        width: 100%;
+      }
+    }
   }
   &-description {
     color: $white;
@@ -27,12 +55,19 @@
     line-height: 20px;
     margin: $site-padding 0;
     text-transform: uppercase;
+    @media only screen and (max-width: 767px) {
+      font-size: 14px;
+    }
   }
   &-title {
     font-family: $brand-font-light;
     font-size: 34px;
     line-height: 40px;
     margin: $site-padding 0;
+    @media only screen and (max-width: 767px) {
+      font-size: 26px;
+      line-height: 30px;
+    }
   }
   &-text {
     font-family: $brand-font;
@@ -61,6 +96,9 @@
       width: 8px;
       @extend .rotate-45;
     }
+    &:hover {
+      color: $white;
+    }
   }
   &-mirror {
     .banner {
@@ -69,6 +107,15 @@
         margin-left: 0;
         margin-right: -285px;
         right: 50%;
+        @media only screen and (min-width: 768px) and (max-width: 991px) {
+          margin-right: -130px;
+        }
+        @media only screen and (max-width: 767px) {
+          height: calc(100% - 150px);
+          margin-right: 0;
+          position: absolute;
+          right: 0;
+        }
         &:before {
           content: "";
           background-color: $black;
@@ -79,6 +126,17 @@
           top: 0;
           width: 100%;
           z-index: 1;
+        }
+        img {
+          @media only screen and (min-width: 768px) and (max-width: 991px) {
+            margin-left: 25%;
+          }
+          @media only screen and (max-width: 767px) {
+            height: 100%;
+            left: -25%;
+            position: relative;
+            width: auto;
+          }
         }
       }
       &-more {

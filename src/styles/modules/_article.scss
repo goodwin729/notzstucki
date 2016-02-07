@@ -1,5 +1,9 @@
 .article {
   padding: ($site-padding * 3) 0;
+  @media only screen and (max-width: 767px) {
+    padding-bottom: $site-padding;
+    padding-top: $site-padding;
+  }
   &-theme {
     color: $brand-color;
     font-family: $brand-font-bold;
@@ -7,6 +11,9 @@
     line-height: 20px;
     margin: $site-padding 0;
     text-transform: uppercase;
+    @media only screen and (max-width: 767px) {
+      font-size: 14px;
+    }
   }
   &-title {
     color: $black;
@@ -14,6 +21,10 @@
     font-size: 34px;
     line-height: 40px;
     margin: $site-padding 0;
+    @media only screen and (max-width: 767px) {
+      font-size: 26px;
+      line-height: 30px;
+    }
   }
   &-subtitle {
     color: $black;
@@ -31,6 +42,17 @@
   }
   &-image {
     width: 100%;
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      margin-left: -$site-padding;
+      position: relative;
+      width: calc(100% + 30px);
+    }
+    @media only screen and (max-width: 767px) {
+      margin-left: -$site-padding;
+      position: relative;
+      width: calc(100% + 30px);
+      //width: 100%;
+    }
   }
   &-back {
     background-color: $brand-color;
@@ -43,6 +65,11 @@
     padding-left: $site-padding * 3;
     position: relative;
     text-transform: uppercase;
+    @media only screen and (max-width: 767px) {
+      display: block;
+      margin-bottom: $site-padding;
+      width: 100%;
+    }
     &:before {
       content: "";
       border-bottom: 2px solid $white;

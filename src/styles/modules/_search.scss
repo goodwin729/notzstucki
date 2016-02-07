@@ -2,8 +2,29 @@
   &-btn {
     background-color: $white;
     border: none;
+    padding: 0 $site-padding;
+    @media only screen and (max-width: 767px) {
+      background-color: $black;
+    }
+    &:visited {
+      .search {
+        &-text { color: $white; }
+        &-icon { background-image: url( $img-dir + "/icons/search.png" ); }
+      }
+    }
     &:hover {
-      background-color: $gray;
+      .search {
+        &-text { color: $brand-color; }
+        &-icon { background-image: url( $img-dir + "/icons/search-hover.png" ); }
+      }
+    }
+    &.is-active {
+      background-color: $gray-dark;
+      color: $white;
+      .search {
+        &-text { color: $white; }
+        &-icon { background-image: url( $img-dir + "/icons/search-active.png" ); }
+      }
     }
   }
   &-text {
@@ -12,13 +33,70 @@
     font-family: $brand-font-bold;
     font-size: 13px;
     line-height: 30px;
+    padding-left: $site-padding;
     text-transform: uppercase;
+    @media only screen and (max-width: 767px) {
+      display: none;
+    }
   }
-  &-icon {
+  &-icon,
+  .icon {
     float: right;
     height: $site-padding * 2;
+    margin-top: 0;
     width: $site-padding * 2;
+    @media only screen and (max-width: 767px) {
+      float: none;
+    }
   }
+
+  &-drop {
+    border-bottom: 1px solid $gray;
+    display: block;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    top: -15px;
+    width: 100%;
+    z-index: 10;
+    @extend .transition-0_5s;
+    &:before {
+      content: "";
+      background-color: $gray-dark;
+      height: 100%;
+      left: 0;
+      opacity: 0.95;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -1;
+    }
+    &-input {
+      background-color: transparent;
+      border: 1px solid transparent;
+      color: $white;
+      font-size: 18px;
+      line-height: 48px;
+      margin-top: $site-padding;
+      padding: 0;
+      padding-right: $site-padding * 4;
+      width: 100%;
+      @media only screen and (max-width: 767px) {
+        font-size: 14px;
+      }
+    }
+    &-btn {
+      background: transparent url( $img-dir + "/icons/search-big.png" ) no-repeat center center;
+      border: none;
+      height: 50px;
+      position: absolute;
+      right: 0;
+      top: $site-padding;
+      width: 50px;
+    }
+    &.is-active { top: 65px; }
+  }
+  &-trigger {}
 
   &-result {
     &-title {
@@ -27,6 +105,12 @@
       line-height: 42px;
       margin: 0;
       padding: ($site-padding * 4) ($site-padding * 22) ($site-padding * 3) 0;
+      @media only screen and (max-width: 767px) {
+        background: none;
+        font-size: 26px;
+        line-height: 30px;
+        padding: $site-padding 0;
+      }
     }
     &-key {
       color: $brand-color;
@@ -41,6 +125,13 @@
     &-item {
       border-bottom: 1px solid $gray;
       padding: $site-padding 0;
+      &:hover {
+        .search-result {
+          &-theme { color: $gray-dark; }
+          &-name { color: $brand-color; }
+          &-date { color: $gray-dark; }
+        }
+      }
     }
     &-theme {
       color: $brand-color;
