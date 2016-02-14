@@ -13,6 +13,10 @@
     position: absolute;
     top: 0;
     width: 40px;
+    @media only screen and (max-width: 767px) {
+      background-image: url( $img-dir + "logo-x2.png" );
+      background-size: 30px;
+    }
   }
   &-title {
     color: $brand-color;
@@ -20,12 +24,20 @@
     display: block;
     font-size: 32px;
     line-height: 30px;
+    @media only screen and (max-width: 767px) {
+      font-size: 28px;
+    }
   }
   &-subtitle {
+    color: $gray-dark;
     display: block;
     font-family: $brand-font-semibold;
     font-size: 9px;
     line-height: 10px;
+    padding-left: 2px;
     text-transform: uppercase;
+    @media only screen and (max-width: 767px) {
+      font-size: 8px;
+    }
   }
 }

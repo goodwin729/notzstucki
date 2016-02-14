@@ -2,10 +2,11 @@
 <html lang="en-us">
 <head>
   <meta charset="utf-8">
-  <title>test</title>
+  <title>NScope</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="format-detection" content="telephone=no">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="js/main.js" type="text/javascript"></script>
 </head>
@@ -20,7 +21,29 @@
       </a>
   
       <div class="header-nav">
+  
         <ul class="header-nav-list">
+          <li class="header-nav-item">
+  
+            <ul class="nav-list nav-list--header">
+              <li class="nav-item is-active">
+                <a href="index.html" title="" class="nav-link">home</a>
+              </li>
+              <li class="nav-item">
+                <a href="category-listing.html" title="" class="nav-link">Fintech</a>
+              </li>
+              <li class="nav-item">
+                <a href="category-listing.html" title="" class="nav-link">Regulatory</a>
+              </li>
+              <li class="nav-item">
+                <a href="category-listing.html" title="" class="nav-link">Investment</a>
+              </li>
+              <li class="nav-item">
+                <a href="category-listing.html" title="" class="nav-link">NS Zoom</a>
+              </li>
+            </ul>
+  
+          </li>
           <li class="header-nav-item">
   
             <button class="search search-btn search-trigger header-nav-link">
@@ -29,19 +52,39 @@
             </button>
   
           </li>
-          <li class="header-nav-item mobile-erase">
-            <a href="#" title="" class="header-nav-link btn btn--black">
+          <li class="header-nav-item share--drop tablet-portrait-erase mobile-erase">
+            <a href="javascript:;" title="" class="share--drop-trigger header-nav-link btn btn--black">
               <i class="icon icon-big icon-share"></i>
             </a>
+            <div class="share--drop-item">
+              <a share-social="facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://nscope.notzstucki.com" title="" class="share--drop-link">
+                <i class="share--drop-icon icon icon-facebook"></i>
+              </a>
+            </div>
+            <div class="share--drop-item">
+              <a share-social="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=http://nscope.notzstucki.com" title="" class="share--drop-link">
+                <i class="share--drop-icon icon icon-linkedin"></i>
+              </a>
+            </div>
+            <div class="share--drop-item">
+              <a href="#" title="" class="share--drop-link">
+                <i class="share--drop-icon icon icon-twitter"></i>
+              </a>
+            </div>
+            <div class="share--drop-item">
+              <a href="#" title="" class="share--drop-link">
+                <i class="share--drop-icon icon icon-googleplus"></i>
+              </a>
+            </div>
           </li>
-          <li class="header-nav-item mobile-erase">
+          <li class="header-nav-item tablet-portrait-erase mobile-erase">
             <a href="#" title="" class="header-nav-link btn btn--blue">
               <img src="img/logo-notzstucki-blue.png" alt="">
             </a>
           </li>
           <li class="header-nav-item header-nav-mobile">
-            <a href="#" title="" class="header-nav-link btn btn--blue">
-              <button class="btn-mobile btn-mobile-trigger nav-mobile"></button>
+            <a href="#" title="" class="header-nav-link btn btn--blue nav-mobile btn-mobile-trigger">
+              <button class="btn-mobile"></button>
             </a>
           </li>
         </ul>
@@ -77,16 +120,16 @@
                 <div class="select-drop">
                   <ul class="select-drop-list">
                     <li class="select-drop-item">
-                      <a href="#" title="" class="select-drop-link">Fintech</a>
+                      <a href="category-listing.html" title="" class="select-drop-link">Fintech</a>
                     </li>
                     <li class="select-drop-item">
-                      <a href="#" title="" class="select-drop-link">Investment</a>
+                      <a href="category-listing.html" title="" class="select-drop-link">Investment</a>
                     </li>
                     <li class="select-drop-item">
-                      <a href="#" title="" class="select-drop-link">Regulatory</a>
+                      <a href="category-listing.html" title="" class="select-drop-link">Regulatory</a>
                     </li>
                     <li class="select-drop-item">
-                      <a href="#" title="" class="select-drop-link">NSZoom</a>
+                      <a href="category-listing.html" title="" class="select-drop-link">NSZoom</a>
                     </li>
                   </ul>
                 </div>
@@ -103,7 +146,7 @@
               <h3 class="nav-title">N-SCope categories</h3>
               <ul class="nav-list">
                 <li class="nav-item nav-item-mobile">
-                  <img src="img/logo-notzstucki-white.png" alt="">
+                  <img src="img/logo-notzstucki-white-x2.png" alt="" width="108">
                 </li>
                 <li class="nav-item is-active">
                   <a href="index.html" title="" class="nav-link">home</a>
@@ -131,7 +174,7 @@
                 </li>
                 <li class="nav-item nav-item-mobile">
           
-                  <div class="share">
+                  <div class="share share-navigation">
                     <ul class="share-list">
                       <li class="share-item">
                         <a href="#" title="" class="share-link">
@@ -164,6 +207,7 @@
                 </li>
                 <li class="nav-item nav-item-mobile">
           
+                  <label class="form-label">NSCOPE Archive database</label>
                   <div class="select">
                     <span class="select-value">Select the month</span>
                     <div class="select-drop">
@@ -192,6 +236,7 @@
     </div>
   </div>
   <div class="banner">
+    <a href="listing-open.html" title="" class="banner-click"></a>
     <div class="banner-image">
       <img src="img/banner-img.jpg" alt="">
     </div>
@@ -210,13 +255,13 @@
       </div>
     </div>
   </div>
-  <div class="container">
+  <div class="container line-object">
     <div class="row">
   
       <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
   
         <div class="news">
-          <h3 class="title-border news-title">featured news</h3>
+          <h3 class="title-border">featured news</h3>
           <div class="row">
             <ul class="news-list">
               <li class="news-item col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -252,15 +297,15 @@
   
       </div>
   
-      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 tablet-portrait-erase mobile-erase">
   
         <div class="archive">
-          <h3 class="title-border categories-title">nscope archives</h3>
+          <h3 class="title-border">nscope archives</h3>
           <p class="archive-text">Browse our vast database of knowledge and infromation by selecting posts for particular date:</p>
         
-          <div class="form-field">
-            <label class="form-label">NSCOPE Archive database</label>
-            <div class="form-value">
+          <div class="form-field archive-form-field">
+            <label class="form-label archive-form-label">NSCOPE Archive database</label>
+            <div class="form-value archive-form-value">
         
               <div class="select">
                 <span class="select-value">Select the month</span>
@@ -287,14 +332,14 @@
   
     </div>
   </div>
-  <div class="categories">
+  <div class="categories line-object">
     <div class="container">
   
-      <h3 class="title-border categories-title">latest from nscope categories</h3>
+      <h3 class="title-border">latest from nscope categories</h3>
       <div class="row">
   
         <ul class="categories-list">
-          <li class="categories-item col-lg-3 col-md-3 col-sm-3 col-xs-12">
+          <li class="categories-item col-lg-3 col-md-3 col-sm-6 col-xs-12">
             <a href="category-listing.html" title="" class="categories-link">
               <span class="categories-image">
                 <img src="img/categories-img-tumb-1.jpg" alt="" class="categories-image-img">
@@ -304,7 +349,7 @@
               <span class="categories-info">by John Dolmer, Jan 12 2016</span>
             </a>
           </li>
-          <li class="categories-item col-lg-3 col-md-3 col-sm-3 col-xs-12">
+          <li class="categories-item col-lg-3 col-md-3 col-sm-6 col-xs-12">
             <a href="category-listing.html" title="" class="categories-link">
               <span class="categories-image">
                 <img src="img/categories-img-tumb-2.jpg" alt="" class="categories-image-img">
@@ -314,7 +359,7 @@
               <span class="categories-info">by John Dolmer, Jan 12 2016</span>
             </a>
           </li>
-          <li class="categories-item col-lg-3 col-md-3 col-sm-3 col-xs-12">
+          <li class="categories-item col-lg-3 col-md-3 col-sm-6 col-xs-12">
             <a href="category-listing.html" title="" class="categories-link">
               <span class="categories-image">
                 <img src="img/categories-img-tumb-3.jpg" alt="" class="categories-image-img">
@@ -324,7 +369,7 @@
               <span class="categories-info">by John Dolmer, Jan 12 2016</span>
             </a>
           </li>
-          <li class="categories-item col-lg-3 col-md-3 col-sm-3 col-xs-12">
+          <li class="categories-item col-lg-3 col-md-3 col-sm-6 col-xs-12">
             <a href="category-listing.html" title="" class="categories-link">
               <span class="categories-image">
                 <img src="img/categories-img-tumb-4.jpg" alt="" class="categories-image-img">
@@ -339,7 +384,38 @@
       </div>
     </div>
   </div>
-  <div class="overview">
+  
+  <div class="container line-object archive-mobile">
+    <div class="archive">
+      <h3 class="title-border">nscope archives</h3>
+      <p class="archive-text">Browse our vast database of knowledge and infromation by selecting posts for particular date:</p>
+  
+      <div class="form-field archive-form-field">
+        <label class="form-label archive-form-label">NSCOPE Archive database</label>
+        <div class="form-value archive-form-value">
+  
+          <div class="select">
+            <span class="select-value">Select the month</span>
+            <div class="select-drop">
+              <ul class="select-drop-list">
+                <li class="select-drop-item">
+                  <a href="#" title="" class="select-drop-link">January  2015 (12)</a>
+                </li>
+                <li class="select-drop-item">
+                  <a href="#" title="" class="select-drop-link">February  2015 (12)</a>
+                </li>
+                <li class="select-drop-item">
+                  <a href="#" title="" class="select-drop-link">March  2015 (12)</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="overview line-object">
     <div class="container">
   
       <h3 class="title-border overview-table-title-mobile">market overview</h3>
@@ -487,7 +563,7 @@
         <div class="col-lg-8 col-md-8 col-sm-6">
   
           <a href="#" title="" class="footer-logo">
-            <img src="img/logo-notzstucki-white.png" alt="">
+            <img src="img/logo-notzstucki-white-x2.png" alt="" width="108">
           </a>
   
           <div class="footer-dot">
@@ -520,7 +596,7 @@
           </div>
   
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-">
+        <div class="col-lg-4 col-md-4 col-sm-6">
   
           <div class="footer-form form-field">
             <label class="form-label">Keep up with the updates from financial world</label>
@@ -564,7 +640,7 @@
           <div class="footer-dash is-left">
             <ul class="footer-dash-list">
               <li class="footer-dash-item">Copyright&nbsp;&copy;&nbsp;2016 Notz Stucki Group</li>
-              <li class="footer-dash-item">
+              <li class="footer-dash-item footer-dash-item--none">
                 <a href="#" title="" class="icon icon-linkedin-logo"></a>
               </li>
             </ul>

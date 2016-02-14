@@ -1,12 +1,12 @@
 .nav {
-  padding: $site-padding * 4 0;
+  padding: $site-padding * 4 $site-padding;
   @extend .transition-0_5s;
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
+  /*@media only screen and (min-width: 768px) and (max-width: 991px) {
     padding-bottom: $site-padding * 2;
     padding-left: $site-padding;
     padding-top: 0;
-  }
-  @media only screen and (max-width: 767px) {
+  }*/
+  @media only screen and (max-width: 991px) {
     background-color: $brand-color;
     height: calc(100vh - 65px);
     left: 0;
@@ -23,18 +23,30 @@
     margin: 10px (-$site-padding / 3);
     padding: 0;
     position: relative;
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: 991px) {
       margin-bottom: 0;
       margin-top: 0;
-      padding: 0 20px;
-      padding-bottom: $site-padding;
+      padding: 0 10px;
+      padding-bottom: $site-padding * 2;
+    }
+    &--header {
+      margin-right: $site-padding / 2;
+      opacity: 0;
+      width: 570px;
+      @extend .transition-0_5s;
+      @media only screen and (max-width: 1199px) {
+        display: none;
+      }
+      &.is-active {
+        opacity: 1;
+      }
     }
   }
   &-item {
     float: left;
     padding: 0 $site-padding / 3;
     width: calc(100% / 5);
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: 991px) {
       border-top: 1px solid $brand-color-light;
       float: none;
       padding-left: 0;
@@ -43,17 +55,19 @@
     }
     &-mobile {
       display: none;
-      @media only screen and (max-width: 767px) {
+      @media only screen and (max-width: 991px) {
         display: block;
       }
       &:first-child {
-        @media only screen and (max-width: 767px) {
+        @media only screen and (max-width: 991px) {
           border-top: none;
           padding-bottom: 25px;
           padding-top: 25px;
         }
       }
       .share {
+        margin-bottom: $site-padding;
+        margin-top: $site-padding;
         &-list {
           float: none;
           text-align: center;
@@ -67,17 +81,51 @@
           &:last-child { margin-right: 0; }
         }
         .icon {
-          &-facebook {background-image: url( $img-dir + "/icons/facebook-white.png" );}
-          &-twitter {background-image: url( $img-dir + "/icons/twitter-white.png" );}
-          &-googleplus {background-image: url( $img-dir + "/icons/googleplus-white.png" );}
-          &-linkedin {background-image: url( $img-dir + "/icons/linkedin-white.png" );}
-          &-mail {background-image: url( $img-dir + "/icons/mail-white.png" );}
-          &-instagram {background-image: url( $img-dir + "/icons/instagram-white.png" );}
+          &-facebook {
+            background-image: url( $img-dir + "/icons/facebook-white.png" );
+            @media only screen and (max-width: 991px) {
+              background-image: url( $img-dir + "/icons/facebook-white-x2.png" );
+            }
+          }
+          &-twitter {
+            background-image: url( $img-dir + "/icons/twitter-white.png" );
+            @media only screen and (max-width: 991px) {
+              background-image: url( $img-dir + "/icons/twitter-white-x2.png" );
+            }
+          }
+          &-googleplus {
+            background-image: url( $img-dir + "/icons/googleplus-white.png" );
+            @media only screen and (max-width: 991px) {
+              background-image: url( $img-dir + "/icons/googleplus-white-x2.png" );
+            }
+          }
+          &-linkedin {
+            background-image: url( $img-dir + "/icons/linkedin-white.png" );
+            @media only screen and (max-width: 991px) {
+              background-image: url( $img-dir + "/icons/linkedin-white-x2.png" );
+            }
+          }
+          &-mail {
+            background-image: url( $img-dir + "/icons/mail-white.png" );
+            @media only screen and (max-width: 991px) {
+              background-image: url( $img-dir + "/icons/mail-white-x2.png" );
+            }
+          }
+          &-instagram {
+            background-image: url( $img-dir + "/icons/instagram-white.png" );
+            @media only screen and (max-width: 991px) {
+              background-image: url( $img-dir + "/icons/instagram-white-x2.png" );
+            }
+          }
         }
       }
       .select-drop {
         bottom: 100%;
         top: auto;
+      }
+      .form-label {
+        color: $white;
+        margin-bottom: 10px;
       }
     }
     &.is-active {
@@ -102,11 +150,12 @@
     text-align: center;
     text-transform: uppercase;
     width: 100%;
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: 991px) {
       background-color: transparent;
       border: none;
       color: $white;
       font-family: $brand-font-bold;
+      font-weight: normal;
       padding-bottom: $site-padding;
       padding-top: $site-padding;
       text-align: left;
@@ -123,7 +172,7 @@
       top: 50%;
       width: 8px;
       @extend .rotate-45;
-      @media only screen and (max-width: 767px) {
+      @media only screen and (max-width: 991px) {
         display: block;
       }
     }
@@ -133,7 +182,7 @@
       background-color: $black;
       border-color: $black;
       color: $white;
-      @media only screen and (max-width: 767px) {
+      @media only screen and (max-width: 991px) {
         background-color: $brand-color;
         border-color: transparent;
       }
@@ -141,12 +190,13 @@
   }
   &-title {
     color: $gray-dark;
-    font-family: $brand-font-semibold;
+    font-family: $brand-font-bold;
     font-size: 14px;
+    font-weight: normal;
     line-height: 16px;
     margin: 10px 0;
     text-transform: uppercase;
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: 991px) {
       display: none;
     }
   }

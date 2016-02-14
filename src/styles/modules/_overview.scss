@@ -1,5 +1,4 @@
 .overview {
-  margin: $site-padding 0;
   &-rubric {
     color: $gray-dark;
     font-family: $brand-font-light;
@@ -25,6 +24,7 @@
     display: block;
     font-family: $brand-font-bold;
     font-size: 14px;
+    font-weight: normal;
     line-height: 18px;
     @media only screen and (max-width: 767px) {
       font-size: 9px;
@@ -58,6 +58,7 @@
       color: $brand-color;
       font-family: $brand-font-bold;
       font-size: 14px;
+      font-weight: normal;
       line-height: 15px;
       padding-bottom: $site-padding;
       padding-top: $site-padding;
@@ -86,20 +87,52 @@
         display: none !important;
         font-family: $brand-font-bold;
         font-size: 12px;
+        font-weight: normal;
         margin-bottom: 5px;
         @media only screen and (max-width: 767px) {
-          display: block;
+          display: block !important;
         }
       }
     }
     &-item {
-      border-top: 1px solid $gray;
+      min-width: 131px;
       padding-bottom: $site-padding;
       padding-top: $site-padding;
+      position: relative;
       text-align: center;
-      &:first-child { text-align: left; }
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        min-width: 90px;
+      }
       @media only screen and (max-width: 767px) {
         border-top: none;
+        min-width: 0;
+      }
+      &:before {
+        content: "";
+        background-color: $gray;
+        height: $site-padding * 2;
+        left: 0;
+        margin-top: -$site-padding;
+        position: absolute;
+        top: 50%;
+        width: 1px;
+        @media only screen and (max-width: 767px) {
+          display: none;
+        }
+      }
+      &:after {
+        content: "";
+        background-color: $gray;
+        display: block;
+        height: 1px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+      &:first-child {
+        text-align: left;
+        &:before { display: none; }
       }
     }
   }

@@ -1,10 +1,13 @@
 .footer {
   background-color: $brand-color;
   padding-bottom: $site-padding * 2;
-  padding-top: $site-padding * 2;
+  padding-top: 55px;
+  @media only screen and (max-width: 991px) {
+    padding-top: 40px;
+  }
   &-logo {
     display: block;
-    margin-bottom: $site-padding;
+    margin-bottom: 20px;
     @media only screen and (min-width: 768px) and (max-width: 991px) {
       margin-bottom: 0;
       margin-top: $site-padding * 2;
@@ -94,7 +97,7 @@
     }
   }
   &-dash {
-    margin: $site-padding / 2 0;
+    margin: $site-padding 0;
     @media only screen and (max-width: 767px) {
       float: none;
       width: 100%;
@@ -105,19 +108,45 @@
       padding: 0;
     }
     &-item {
-      border-left: 1px solid $brand-color-light;
       color: $white;
       float: left;
       font-size: 10px;
       line-height: 14px;
       padding: 0 $site-padding;
+      position: relative;
+      .icon-linkedin-logo {
+        margin-bottom: -5px;
+        position: relative;
+        top: -1px;
+      }
       @media only screen and (max-width: 767px) {
-        border-left: none;
         padding: 0;
+      }
+      &:before {
+        content: "";
+        background-color: $brand-color-light;
+        display: block;
+        height: 10px;
+        left: 0;
+        margin-top: -5px;
+        position: absolute;
+        top: 50%;
+        width: 1px;
+        @media only screen and (max-width: 767px) {
+          left: -$site-padding;
+        }
+      }
+      &--none {
+        &:before {
+          @media only screen and (max-width: 767px) {
+            display:none;
+          }
+        }
       }
       &:first-child {
         border-left: none;
         padding-left: 0;
+        &:before { display: none; }
       }
       &:last-child {
         padding-right: 0;
@@ -130,6 +159,7 @@
       color: $white;
       font-size: 13px;
       font-family: $brand-font-bold;
+      font-weight: normal;
       line-height: 14px;
       @media only screen and (max-width: 767px) {
         font-size: 11px;

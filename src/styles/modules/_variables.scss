@@ -97,22 +97,23 @@ body,html{
 b,
 strong {
   font-family: $brand-font-bold;
+  font-weight: normal;
 }
 
-:focus::-webkit-input-placeholder {color: transparent}
-:focus::-moz-placeholder          {color: transparent}
-:focus:-moz-placeholder           {color: transparent}
-:focus:-ms-input-placeholder      {color: transparent}
+:focus::-webkit-input-placeholder {color: $white;}
+:focus::-moz-placeholder          {color: $white;}
+:focus:-moz-placeholder           {color: $white;}
+:focus:-ms-input-placeholder      {color: $white;}
 
-input[placeholder]          {text-overflow:ellipsis;}
-input::-moz-placeholder     {text-overflow:ellipsis;}
-input:-moz-placeholder      {text-overflow:ellipsis;}
-input:-ms-input-placeholder {text-overflow:ellipsis;}
+input[placeholder]          {text-overflow: ellipsis;}
+input::-moz-placeholder     {text-overflow: ellipsis;}
+input:-moz-placeholder      {text-overflow: ellipsis;}
+input:-ms-input-placeholder {text-overflow: ellipsis;}
 
-::-webkit-input-placeholder {color: $white; font-family: $brand-color-light; }
-::-moz-placeholder          {color: $white; font-family: $brand-color-light; }/* Firefox 19+ */
-:-moz-placeholder           {color: $white; font-family: $brand-color-light; }/* Firefox 18- */
-:-ms-input-placeholder      {color: $white; font-family: $brand-color-light; }
+::-webkit-input-placeholder {color: $white; }
+::-moz-placeholder          {color: $white; opacity: 1; }/* Firefox 19+ */
+:-moz-placeholder           {color: $white; opacity: 1; }/* Firefox 18- */
+:-ms-input-placeholder      {color: $white; }
 
 .giraffe {
   background: url( $img-dir + "giraffe-1.png" ) no-repeat right bottom;
@@ -120,8 +121,27 @@ input:-ms-input-placeholder {text-overflow:ellipsis;}
     background: none;
     padding-right: $site-padding;
   }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    height: 0;
+  }
+  @media only screen and (max-width: 991px) {
+    padding-right: 0;
+  }
+  .title {
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      display: none;
+    }
+  }
+  &-is-blank {
+    background-image: none;
+  }
 }
-
+.line {
+  &-object {
+    margin-bottom: $site-padding * 2;
+    margin-top: $site-padding * 2;
+  }
+}
 body {
   padding-top: 65px;
   a {
@@ -184,28 +204,26 @@ body {
     padding: 0;
   }
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    max-width: 1024px;
+    max-width: 1199px;
     width: auto;
   }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
-    max-width: 768px;
+    max-width: 991px;
     width: auto;
   }
   @media only screen and (max-width: 767px) {
     width: auto;
   }
 }
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6
+  { font-weight: normal !important; }
 
 .transition-0_5s{
     -webkit-transition: all 0.5s;
        -moz-transition: all 0.5s;
          -o-transition: all 0.5s;
             transition: all 0.5s;
-}
-.blur {
-  -webkit-filter: blur(2px);
-     -moz-filter: blur(2px);
-          filter: blur(2px);
 }
 .rotate-45 {
   -webkit-transform: rotate(45deg);

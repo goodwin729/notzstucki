@@ -8,20 +8,27 @@
     padding-top: $site-padding * 5;
   }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
+    background-position: center bottom;
     padding-bottom: $site-padding * 30;
+    padding-top: $site-padding * 5;
   }
   @media only screen and (max-width: 767px) {
     background-position: center bottom;
-    background-size: 100%;
+    background-size: 90%;
+    margin-left: -$site-padding;
+    margin-right: -$site-padding;
+    min-height: 510px;
     padding-bottom: $site-padding * 15;
     padding-top: $site-padding;
+    position: relative;
   }
   &-subtitle {
     color: $brand-color;
     font-family: $brand-font-bold;
     font-size: 16px;
+    font-weight: normal;
     line-height: 20px;
-    margin: $site-padding 0;
+    margin: 10px 0;
     text-transform: uppercase;
     @media only screen and (max-width: 767px) {
       font-size: 13px;
@@ -32,25 +39,27 @@
     font-family: $brand-font-light;
     font-size: 34px;
     line-height: 40px;
-    margin: $site-padding 0;
+    margin: 10px 0;
     @media only screen and (max-width: 767px) {
       font-size: 26px;
       line-height: 30px;
     }
   }
   &-text {
-    color: $gray;
+    color: $gray-dark;
     font-family: $brand-font;
     font-size: 14px;
     line-height: 20px;
-    margin: $site-padding 0;
+    margin: 10px 0;
   }
   &-more {
     color: $gray-dark;
+    display: inline-block;
     font-family: $brand-font-bold;
     font-size: 13px;
+    font-weight: normal;
     line-height: 20px;
-    margin: $site-padding 0;
+    margin: 10px 0;
     margin-bottom: 0;
     position: relative;
     text-transform: uppercase;
@@ -61,7 +70,7 @@
       height: 8px;
       margin-top: -4px;
       position: absolute;
-      right: -$site-padding;
+      right: -10px;
       top: 50%;
       width: 8px;
       @extend .rotate-45;

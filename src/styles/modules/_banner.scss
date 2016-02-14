@@ -6,6 +6,28 @@
   &:hover {
     background-color: $black;
   }
+  &-click {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 6;
+    &-author {
+      background-color: $brand-color;
+      left: auto;
+      right: 0;
+      width: calc(50% - 285px);
+      z-index: 5;
+      @media only screen and (max-width: 1199px) {
+        display: none;
+      }
+      &:hover,
+      &.is-hover {
+        background-color: $black;
+      }
+    }
+  }
   &-content {
     position: relative;
     z-index: 5;
@@ -25,6 +47,12 @@
     overflow: hidden;
     position: absolute;
     top: 0;
+    @media only screen and (min-width: 1200px) {
+      align-items: center;
+      display: flex;
+      height: 100%;
+      width: calc(50% + 85px);
+    }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
       margin-left: 0;
     }
@@ -35,6 +63,10 @@
       width: 100%;
     }
     img {
+      @media only screen and (min-width: 1200px) {
+        height: auto;
+        width: 100%;
+      }
       @media only screen and (min-width: 768px) and (max-width: 991px) {
         margin-left: -25%;
         position: relative;
@@ -52,8 +84,9 @@
   &-subtitle {
     font-family: $brand-font-bold;
     font-size: 16px;
+    font-weight: normal;
     line-height: 20px;
-    margin: $site-padding 0;
+    margin: 10px 0;
     text-transform: uppercase;
     @media only screen and (max-width: 767px) {
       font-size: 14px;
@@ -63,7 +96,7 @@
     font-family: $brand-font-light;
     font-size: 34px;
     line-height: 40px;
-    margin: $site-padding 0;
+    margin: 10px 0;
     @media only screen and (max-width: 767px) {
       font-size: 26px;
       line-height: 30px;
@@ -73,14 +106,16 @@
     font-family: $brand-font;
     font-size: 14px;
     line-height: 20px;
-    margin: $site-padding 0;
+    margin: 10px 0;
   }
   &-more {
     color: $white;
+    display: inline-block;
     font-family: $brand-font-bold;
     font-size: 13px;
+    font-weight: normal;
     line-height: 20px;
-    margin: $site-padding 0;
+    margin: 10px 0;
     margin-bottom: 0;
     position: relative;
     text-transform: uppercase;
@@ -101,17 +136,23 @@
     }
   }
   &-mirror {
+    &:hover {
+      background-color: $brand-color;
+    }
     .banner {
       &-image {
         left: auto;
         margin-left: 0;
         margin-right: -285px;
         right: 50%;
+        @media only screen and (min-width: 1200px) {
+          width: calc(50% + 285px);
+        }
         @media only screen and (min-width: 768px) and (max-width: 991px) {
           margin-right: -130px;
         }
         @media only screen and (max-width: 767px) {
-          height: calc(100% - 150px);
+          height: calc(100% - 140px);
           margin-right: 0;
           position: absolute;
           right: 0;
@@ -121,7 +162,7 @@
           background-color: $black;
           height: 100%;
           left: 0;
-          opacity: 0.4;
+          opacity: 0.6;
           position: absolute;
           top: 0;
           width: 100%;
@@ -132,18 +173,23 @@
             margin-left: 25%;
           }
           @media only screen and (max-width: 767px) {
-            height: 100%;
-            left: -25%;
+            height: auto;
+            left: -4%;
             position: relative;
-            width: auto;
+            width: 180%;
           }
         }
       }
+      /*&-wrapper {
+        @media only screen and (max-width: 767px) {
+          background-color: $black;
+        }
+      }*/
       &-more {
         background-color: $brand-color;
         display: inline-block;
         line-height: 20px;
-        margin-top: 0;
+        margin-top: 8px;
         padding: 10px $site-padding;
         padding-right: $site-padding * 2;
         &:before {
@@ -152,6 +198,43 @@
         &:hover {
           background-color: $black;
           color: $white;
+        }
+      }
+      &-description {
+        padding-right: $site-padding * 3;
+        @media only screen and (max-width: 1199px) {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+  &-no-image {
+    .banner {
+      &-image {
+        display: none;
+      }
+    }
+    @media only screen and (max-width: 767px) {
+      .banner {
+        &-image {
+          display: none;
+        }
+        &-wrapper {
+          background-color: $white;
+          @media only screen and (max-width: 767px) {
+            padding-bottom: $site-padding;
+          }
+        }
+        &-subtitle { color: $brand-color; }
+        &-title { color: $black; }
+        &-text { color: $gray-dark; }
+        &-more {
+          background-color: transparent;
+          color: $black;
+          padding-left: 0;
+          &:before {
+            border-color: $brand-color;
+          }
         }
       }
     }

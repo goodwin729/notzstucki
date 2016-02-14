@@ -9,13 +9,23 @@
     &:visited {
       .search {
         &-text { color: $white; }
-        &-icon { background-image: url( $img-dir + "/icons/search.png" ); }
+        &-icon {
+          background-image: url( $img-dir + "/icons/search.png" );
+          @media only screen and (max-width: 767px) {
+            background-image: url( $img-dir + "/icons/search-active-x2.png" );
+          }
+        }
       }
     }
     &:hover {
       .search {
         &-text { color: $brand-color; }
-        &-icon { background-image: url( $img-dir + "/icons/search-hover.png" ); }
+        &-icon {
+          background-image: url( $img-dir + "/icons/search-hover.png" );
+          @media only screen and (max-width: 767px) {
+            background-image: url( $img-dir + "/icons/search-active-x2.png" );
+          }
+        }
       }
     }
     &.is-active {
@@ -23,7 +33,12 @@
       color: $white;
       .search {
         &-text { color: $white; }
-        &-icon { background-image: url( $img-dir + "/icons/search-active.png" ); }
+        &-icon {
+          background-image: url( $img-dir + "/icons/search-active.png" );
+          @media only screen and (max-width: 767px) {
+            background-image: url( $img-dir + "/icons/search-active-x2.png" );
+          }
+        }
       }
     }
   }
@@ -32,6 +47,7 @@
     display: inline-block;
     font-family: $brand-font-bold;
     font-size: 13px;
+    font-weight: normal;
     line-height: 30px;
     padding-left: $site-padding;
     text-transform: uppercase;
@@ -41,11 +57,13 @@
   }
   &-icon,
   .icon {
+    background-size: 17px;
     float: right;
     height: $site-padding * 2;
     margin-top: 0;
     width: $site-padding * 2;
     @media only screen and (max-width: 767px) {
+      background-image: url( $img-dir + "/icons/search-active-x2.png" );
       float: none;
     }
   }
@@ -60,6 +78,7 @@
     width: 100%;
     z-index: 10;
     @extend .transition-0_5s;
+    &.is-shadow { box-shadow: 0 0 2px $gray; }
     &:before {
       content: "";
       background-color: $gray-dark;
@@ -87,14 +106,21 @@
     }
     &-btn {
       background: transparent url( $img-dir + "/icons/search-big.png" ) no-repeat center center;
+      background-size: 26px;
       border: none;
       height: 50px;
       position: absolute;
       right: 0;
       top: $site-padding;
       width: 50px;
+      @media only screen and (max-width: 767px) {
+        background-image: url( $img-dir + "/icons/search-big-x2.png" );
+      }
     }
-    &.is-active { top: 65px; }
+    &.is-active {
+      border-bottom: none;
+      top: 65px;
+    }
   }
   &-trigger {}
 
@@ -102,18 +128,27 @@
     &-title {
       background: url( $img-dir + "giraffe.png" ) no-repeat right bottom;
       font-family: $brand-font-light;
+      font-size: 34px;
       line-height: 42px;
       margin: 0;
-      padding: ($site-padding * 4) ($site-padding * 22) ($site-padding * 3) 0;
+      min-height: 190px;
+      padding: ($site-padding * 4) ($site-padding * 17) ($site-padding * 3) 0;
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        background: none;
+        min-height: auto;
+        padding: $site-padding * 2 0;
+      }
       @media only screen and (max-width: 767px) {
         background: none;
         font-size: 26px;
         line-height: 30px;
-        padding: $site-padding 0;
+        min-height: 0;
+        padding: $site-padding * 2 0;
       }
     }
     &-key {
       color: $brand-color;
+      font-family: $brand-font;
     }
     &-list {
       border-top: 1px solid $gray;
@@ -125,6 +160,8 @@
     &-item {
       border-bottom: 1px solid $gray;
       padding: $site-padding 0;
+      @media only screen and (max-width: 767px) {
+      }
       &:hover {
         .search-result {
           &-theme { color: $gray-dark; }
@@ -138,18 +175,27 @@
       display: block;
       font-family: $brand-font-bold;
       font-size: 13px;
-      line-height: 15px;
+      font-weight: normal;
+      line-height: 18px;
       margin: 10px 0;
       text-transform: uppercase;
+      @media only screen and (max-width: 767px) {
+        margin-bottom: 5px;
+        margin-top: $site-padding;
+      }
     }
     &-name {
       color: $gray-dark;
       display: block;
       font-family: $brand-font-light;
       font-size: 21px;
-      line-height: 24px;
+      line-height: 20px;
       margin: 10px 0;
       overflow: hidden;
+      @media only screen and (max-width: 767px) {
+        line-height: 24px;
+        margin-top: 5px;
+      }
     }
     &-date {
       color: $brand-color;
@@ -164,18 +210,28 @@
       display: block;
       font-family: $brand-font-light;
       font-size: 14px;
-      height: 40px;
-      line-height: 20px;
-      margin: $site-padding 0;
+      height: 50px;
+      line-height: 24px;
+      margin: 10px 0 0;
       overflow: hidden;
+      @media only screen and (max-width: 767px) {
+        margin-bottom: 5px;
+        margin-top: 15px;
+      }
     }
     &-more {
       color: $gray-dark;
+      display: inline-block;
       font-family: $brand-font-bold;
       font-size: 12px;
-      line-height: 20px;
+      font-weight: normal;
+      line-height: 24px;
+      margin-bottom: 10px;
       position: relative;
       text-transform: uppercase;
+      @media only screen and (max-width: 767px) {
+        margin-bottom: 5px;
+      }
       &:before {
         content: "";
         border-top: 2px solid $brand-color;
@@ -183,7 +239,7 @@
         height: 8px;
         margin-top: -4px;
         position: absolute;
-        right: -$site-padding;
+        right: -10px;
         top: 50%;
         width: 8px;
         @extend .rotate-45;
@@ -191,6 +247,125 @@
       &:hover {
         color: $brand-color;
         &:before { border-color: $gray-dark; }
+      }
+    }
+  }
+  &-empty {
+    background: url( $img-dir + "giraffe-2.png" ) no-repeat right bottom;
+    padding-bottom: $site-padding * 6;
+    @extend .clearfix;
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      background-image: none;
+    }
+    @media only screen and (max-width: 767px) {
+      background-image: none;
+    }
+    &-title {
+      font-family: $brand-font-light;
+      font-size: 34px;
+      line-height: 42px;
+      margin: 0;
+      min-height: 190px;
+      padding: ($site-padding * 4) 0 ($site-padding * 3) 0;
+      @media only screen and (min-width: 768px) and (max-width: 1199px) {
+        min-height: auto;
+        padding: $site-padding * 4 0;
+      }
+      @media only screen and (max-width: 767px) {
+        font-size: 26px;
+        line-height: 30px;
+        min-height: 0;
+        padding: $site-padding * 2 0;
+      }
+    }
+    &-text {
+      border-top: 1px solid $gray;
+      color: $gray-dark;
+      font-family: $brand-font;
+      font-size: 16px;
+      line-height: 20px;
+      padding: 35px 0 20px;
+    }
+    &-field {
+      padding-bottom: 55px;
+      position: relative;
+      @media only screen and (max-width: 767px) {
+        padding-bottom: $site-padding * 2;
+      }
+    }
+    &-input {
+      background-color: $white;
+      border: 1px solid $gray;
+      color: $gray-dark;
+      font-size: 14px;
+      line-height: 20px;
+      padding: $site-padding;
+      padding-right: $site-padding * 4;
+      width: 100%;
+      &::-webkit-input-placeholder {color: $gray-dark; font-style: italic; }
+      &::-moz-placeholder          {color: $gray-dark; font-style: italic; opacity: 1; }/* Firefox 19+ */
+      &:-moz-placeholder           {color: $gray-dark; font-style: italic; opacity: 1; }/* Firefox 18- */
+      &:-ms-input-placeholder      {color: $gray-dark; font-style: italic; }
+
+      @media only screen and (max-width: 767px) {
+        font-size: 14px;
+      }
+    }
+    &-btn {
+      background: transparent url( $img-dir + "/icons/search.png" ) no-repeat center center;
+      background-size: 17px;
+      border: none;
+      height: 50px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 50px;
+      @media only screen and (max-width: 767px) {
+        background-image: url( $img-dir + "/icons/search-x2.png" );
+      }
+      &:hover {
+        background-image: url( $img-dir + "/icons/search-hover.png" );
+        @media only screen and (max-width: 767px) {
+          background-image: url( $img-dir + "/icons/search-hover-x2.png" );
+        }
+      }
+    }
+    &-more {
+      color: $black;
+      display: inline-block;
+      font-family: $brand-font-bold;
+      font-size: 12px;
+      font-weight: normal;
+      line-height: 24px;
+      margin-bottom: 10px;
+      position: relative;
+      text-transform: uppercase;
+      @media only screen and (max-width: 767px) {
+        margin-bottom: 5px;
+      }
+      &:before {
+        content: "";
+        border-top: 2px solid $brand-color;
+        border-right: 2px solid $brand-color;
+        height: 8px;
+        margin-top: -4px;
+        position: absolute;
+        right: -10px;
+        top: 50%;
+        width: 8px;
+        @extend .rotate-45;
+      }
+      &:hover {
+        color: $brand-color;
+        &:before { border-color: $gray-dark; }
+      }
+    }
+  }
+  &-nav {
+    .nav {
+      display: none;
+      @media only screen and (max-width: 991px) {
+        display: block;
       }
     }
   }
