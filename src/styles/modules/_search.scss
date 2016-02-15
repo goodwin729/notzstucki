@@ -189,7 +189,7 @@
       display: block;
       font-family: $brand-font-light;
       font-size: 21px;
-      line-height: 20px;
+      line-height: 26px;
       margin: 10px 0;
       overflow: hidden;
       @media only screen and (max-width: 767px) {
@@ -287,10 +287,18 @@
       padding: 35px 0 20px;
     }
     &-field {
-      padding-bottom: 55px;
+      margin-bottom: 55px;
       position: relative;
       @media only screen and (max-width: 767px) {
-        padding-bottom: $site-padding * 2;
+        margin-bottom: $site-padding * 2;
+      }
+      &:hover {
+        .search-empty-btn {
+          background-image: url( $img-dir + "/icons/search-hover.png" );
+          @media only screen and (max-width: 767px) {
+            background-image: url( $img-dir + "/icons/search-hover-x2.png" );
+          }
+        }
       }
     }
     &-input {
@@ -354,10 +362,6 @@
         top: 50%;
         width: 8px;
         @extend .rotate-45;
-      }
-      &:hover {
-        color: $brand-color;
-        &:before { border-color: $gray-dark; }
       }
     }
   }

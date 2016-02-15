@@ -132,8 +132,10 @@ input:-ms-input-placeholder {text-overflow: ellipsis;}
       display: none;
     }
   }
-  &-is-blank {
+  &-is-blank,
+  &-is-erase {
     background-image: none;
+    & + .line-object { margin-top: -5px; }
   }
 }
 .line {

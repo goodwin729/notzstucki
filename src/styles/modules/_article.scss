@@ -26,6 +26,9 @@
       font-size: 26px;
       line-height: 30px;
     }
+    & + .author-article {
+      margin-top: 0;
+    }
   }
   &-subtitle {
     color: $black;
@@ -96,7 +99,7 @@
       width: 8px;
       @extend .rotate-45;
       @media only screen and (max-width: 767px) {
-        margin-left: 35px;
+        margin-left: 20px;
         margin-top: -20px;
       }
     }

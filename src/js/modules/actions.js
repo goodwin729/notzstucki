@@ -1,4 +1,23 @@
+$( window ).resize(function() {
+
+    var setheight = $('.banner-wrapper').outerHeight();
+    $('.banner-image').add().css('height', setheight);
+
+
+});
 $(document).ready(function(){
+
+    var setheight = $('.banner-wrapper').outerHeight(true);
+    $('.banner-image').add().css('height', setheight);
+
+
+    $('.banner-click-author').hover( function() {
+        $(".author").toggleClass("is-hover");
+        $(".banner").toggleClass("is-hover");
+    });
+    $('.banner-click-article').hover( function() {
+        $(".banner-content").toggleClass("is-hover");
+    });
 
 
     //hidden header + shadow
