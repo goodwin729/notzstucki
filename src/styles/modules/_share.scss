@@ -1,13 +1,25 @@
-.share {
+.share,
+.wpfai {
   margin-bottom: $site-padding;
   margin-top: $site-padding;
   @extend .clearfix;
+  @media only screen and (max-width: 767px) {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  &-navigation {
+    @media only screen and (max-width: 767px) {
+      margin-bottom: $site-padding;
+      margin-top: $site-padding;
+    }
+  }
   &-title {
     color: $black;
     display: block;
     float: left;
     font-family: $brand-font-bold;
     font-size: 14px;
+    font-weight: normal;
     line-height: 20px;
     margin: 0;
     text-transform: uppercase;
@@ -26,6 +38,14 @@
       float: none;
       text-align: center;
     }
+    &-item {
+      float: left;
+      margin-left: $site-padding;
+      @media only screen and (max-width: 767px) {
+        display: inline-block;
+        float: none;
+      }
+    }
   }
   &-item {
     float: left;
@@ -36,4 +56,122 @@
     }
   }
   &-link {}
+
+  .wpfai {
+    &-list {
+      float: right;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      @media only screen and (max-width: 767px) {
+        float: none;
+        text-align: center;
+      }
+      &-item {
+        float: left;
+        margin-left: $site-padding;
+        @media only screen and (max-width: 767px) {
+          display: inline-block;
+          float: none;
+        }
+      }
+    }
+  }
+  &--drop {
+    &-trigger {
+      padding: $site-padding;
+      position: relative;
+      z-index: 5;
+      .icon { margin-top: 2px !important; }
+    }
+    &-list {
+      list-style: none;
+      margin: 0;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      top: -100%;
+      width: 100%;
+    }
+    &-item {
+      height: 60px;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      @extend .transition-0_5s;
+      &:before {
+        content: "";
+        background-color: $white;
+        display: none;
+        height: 1px;
+        left: 0;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+      }
+    }
+    &-link {
+      background-color: $black;
+      display: block;
+      height: 60px;
+      padding: $site-padding;
+      text-align: center;
+      width: 100%;
+      &:hover {
+        background-color: $brand-color;
+      }
+    }
+    &-icon,
+    .icon {
+      height: 20px;
+      margin-top: 6px;
+      width: 20px;
+      &-facebook {
+        background-image: url( $img-dir + "/icons/facebook-white.png" );
+        @media only screen and (max-width: 991px) {
+          background-image: url( $img-dir + "/icons/facebook-white-x2.png" );
+        }
+      }
+      &-twitter {
+        background-image: url( $img-dir + "/icons/twitter-white.png" );
+        @media only screen and (max-width: 991px) {
+          background-image: url( $img-dir + "/icons/twitter-white-x2.png" );
+        }
+      }
+      &-googleplus {
+        background-image: url( $img-dir + "/icons/googleplus-white.png" );
+        @media only screen and (max-width: 991px) {
+          background-image: url( $img-dir + "/icons/googleplus-white-x2.png" );
+        }
+      }
+      &-linkedin {
+        background-image: url( $img-dir + "/icons/linkedin-white.png" );
+        @media only screen and (max-width: 991px) {
+          background-image: url( $img-dir + "/icons/linkedin-white-x2.png" );
+        }
+      }
+      &-mail {
+        background-image: url( $img-dir + "/icons/mail-white.png" );
+        @media only screen and (max-width: 991px) {
+          background-image: url( $img-dir + "/icons/mail-white-x2.png" );
+        }
+      }
+      &-instagram {
+        background-image: url( $img-dir + "/icons/instagram-white.png" );
+        @media only screen and (max-width: 991px) {
+          background-image: url( $img-dir + "/icons/instagram-white-x2.png" );
+        }
+      }
+    }
+    &.is-active {
+      .share--drop-trigger { background-color: $gray-dark; }
+      .share--drop-item {
+        &:before { display: block; }
+        &:nth-child(2) { top: 60px; }
+        &:nth-child(3) { top: 121px; }
+        &:nth-child(4) { top: 182px; }
+        &:nth-child(5) { top: 243px; }
+      }
+    }
+  }
 }

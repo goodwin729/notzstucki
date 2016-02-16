@@ -1,10 +1,11 @@
 .title {
+  color: $gray-dark;
   font-family: $brand-font-light;
-  font-size: 32px;
+  font-size: 34px;
   line-height: 42px;
   margin: 0;
   padding: $site-padding * 4 0;
-  padding-right: $site-padding * 2;
+  padding-right: $site-padding;
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     padding-bottom: $site-padding * 2;
     padding-right: 0;
@@ -13,13 +14,14 @@
   @media only screen and (max-width: 767px) {
     font-size: 24px;
     line-height: 30px;
-    padding: $site-padding * 2 0;
+    padding: 25px 0 5px;
   }
   &-border {
     color: $gray-dark;
     display: block;
     font-family: $brand-font-bold;
     font-size: 14px;
+    font-weight: normal;
     line-height: 15px;
     margin: 0;
     padding: $site-padding 0;

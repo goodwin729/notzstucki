@@ -1,15 +1,19 @@
 .categories {
-  margin: $site-padding 0;
   &-list {
     list-style: none;
     margin: 0;
     padding: 0;
   }
   &-item {
-    margin-bottom: $site-padding;
+    margin-bottom: 10px;
     margin-top: $site-padding;
-    & > *:first-child { margin-top: 0; }
-    & > *:last-child { margin-bottom: 0; }
+    > *:first-child { margin-top: 0; }
+    &:last-child {
+      //margin-bottom: 0;
+      @media only screen and (max-width: 767px) {
+        margin-bottom: 0;
+      }
+    }
   }
   &-link {
     &:hover {
@@ -25,13 +29,13 @@
   }
   &-image {
     display: block;
-    height: 150px;
+    //height: 150px;
     margin: $site-padding 0;
     margin-top: 0;
     overflow: hidden;
     position: relative;
-    @media only screen and (min-width: 768px) and (max-width: 991px) {
-      height: 90px;
+    @media only screen and (max-width: 991px) {
+      height: auto;
     }
     &:before {
       content: "";
@@ -46,7 +50,12 @@
       @extend .transition-0_5s;
     }
     &-img {
-      height: 100%;
+      height: auto;
+      width: 100%;
+      @media only screen and (max-width: 991px) {
+        height: auto;
+        width: 100%;
+      }
     }
   }
   &-subtitle {
@@ -54,8 +63,9 @@
     display: block;
     font-family: $brand-font-bold;
     font-size: 13px;
+    font-weight: normal;
     line-height: 15px;
-    margin: 10px 0;
+    margin: 5px 0;
     text-transform: uppercase;
   }
   &-title {
@@ -63,9 +73,9 @@
     display: block;
     font-family: $brand-font-light;
     font-size: 21px;
-    height: 50px;
-    line-height: 24px;
-    margin: 10px 0;
+    //min-height: 50px;
+    line-height: 25px;
+    margin: 5px 0;
     overflow: hidden;
   }
   &-info {
@@ -74,6 +84,6 @@
     font-family: $brand-font;
     font-size: 11px;
     line-height: 15px;
-    margin: 10px 0;
+    margin: 5px 0;
   }
 }

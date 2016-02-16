@@ -10,6 +10,7 @@
     font-family: $brand-font;
     font-size: 11px;
     display: block;
+    font-weight: normal;
     margin: $site-padding 0;
   }
   &-value {
@@ -17,12 +18,13 @@
     position: relative;
   }
   &-btn {
-    background-color: transparent;
+    background-color: $brand-color;
     border: 1px solid $white;
     color: $white;
     display: inline-block;
     font-family: $brand-font-bold;
     font-size: 13px;
+    font-weight: normal;
     line-height: 18px;
     padding: 10px 25px;
     text-transform: uppercase;

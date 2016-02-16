@@ -6,9 +6,55 @@
   &:hover {
     background-color: $black;
   }
+  &-click {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 6;
+    &-author {
+      background-color: transparent;
+      left: auto;
+      right: 0;
+      width: calc(50% - 285px);
+      z-index: 5;
+      @media only screen and (max-width: 1199px) {
+        display: none;
+      }
+      &.is-hover {
+        background-color: $black;
+      }
+    }
+    &-article {
+      width: calc(50% + 285px);
+      z-index: 6;
+      @media only screen and (max-width: 1199px) {
+        display: none;
+      }
+    }
+  }
   &-content {
     position: relative;
-    z-index: 5;
+    //z-index: 5;
+    /*.author,
+    .banner-description {
+      & > * {
+        position: relative;
+        z-index: 6;
+      }
+    }*/
+    .author {
+      padding-bottom: 0;
+      @media only screen and (max-width: 767px) {
+        padding-bottom: 20px;
+      }
+    }
+    &.is-hover {
+      .banner {
+        &-more { background-color: $black; }
+      }
+    }
   }
   &-wrapper {
     display: table;
@@ -20,11 +66,18 @@
     }
   }
   &-image {
+    align-items: center;
+    display: flex;
+    height: 100%;
     left: 50%;
     margin-left: -85px;
     overflow: hidden;
     position: absolute;
+    text-align: center;
     top: 0;
+    @media only screen and (min-width: 1200px) {
+      width: calc(50% + 85px);
+    }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
       margin-left: 0;
     }
@@ -35,12 +88,19 @@
       width: 100%;
     }
     img {
+      width: 100%;
+      @media only screen and (min-width: 1200px) {
+        height: auto;
+        width: 100%;
+      }
       @media only screen and (min-width: 768px) and (max-width: 991px) {
         margin-left: -25%;
         position: relative;
+        width: 155%;
       }
       @media only screen and (max-width: 767px) {
-        width: 100%;
+        margin-left: -25%;
+        width: 150%;
       }
     }
   }
@@ -52,8 +112,9 @@
   &-subtitle {
     font-family: $brand-font-bold;
     font-size: 16px;
+    font-weight: normal;
     line-height: 20px;
-    margin: $site-padding 0;
+    margin: 10px 0;
     text-transform: uppercase;
     @media only screen and (max-width: 767px) {
       font-size: 14px;
@@ -63,7 +124,7 @@
     font-family: $brand-font-light;
     font-size: 34px;
     line-height: 40px;
-    margin: $site-padding 0;
+    margin: 10px 0;
     @media only screen and (max-width: 767px) {
       font-size: 26px;
       line-height: 30px;
@@ -73,17 +134,20 @@
     font-family: $brand-font;
     font-size: 14px;
     line-height: 20px;
-    margin: $site-padding 0;
+    margin: 10px 0;
   }
   &-more {
     color: $white;
+    display: inline-block;
     font-family: $brand-font-bold;
     font-size: 13px;
+    font-weight: normal;
     line-height: 20px;
-    margin: $site-padding 0;
+    margin: 10px 0;
     margin-bottom: 0;
     position: relative;
     text-transform: uppercase;
+    z-index: 5;
     &:before {
       content: "";
       border-top: 2px solid $white;
@@ -101,17 +165,27 @@
     }
   }
   &-mirror {
+    &:hover {
+      background-color: $brand-color;
+    }
     .banner {
       &-image {
         left: auto;
         margin-left: 0;
         margin-right: -285px;
         right: 50%;
+        @media only screen and (min-width: 1200px) {
+          width: calc(50% + 285px);
+        }
         @media only screen and (min-width: 768px) and (max-width: 991px) {
+          background-color: $black;
           margin-right: -130px;
         }
         @media only screen and (max-width: 767px) {
-          height: calc(100% - 150px);
+          align-items: center;
+          background-color: $black;
+          display: flex;
+          //height: calc(100% - 140px);
           margin-right: 0;
           position: absolute;
           right: 0;
@@ -121,29 +195,36 @@
           background-color: $black;
           height: 100%;
           left: 0;
-          opacity: 0.4;
+          opacity: 0.6;
           position: absolute;
           top: 0;
           width: 100%;
-          z-index: 1;
+          z-index: 0;
         }
         img {
           @media only screen and (min-width: 768px) and (max-width: 991px) {
-            margin-left: 25%;
+            margin-left: -25%;
+            opacity: 0.4;
           }
           @media only screen and (max-width: 767px) {
-            height: 100%;
-            left: -25%;
+            height: auto;
+            left: -15%;
+            opacity: 0.4;
             position: relative;
-            width: auto;
+            width: 150%;
           }
         }
       }
+      /*&-wrapper {
+        @media only screen and (max-width: 767px) {
+          background-color: $black;
+        }
+      }*/
       &-more {
         background-color: $brand-color;
         display: inline-block;
         line-height: 20px;
-        margin-top: 0;
+        margin-top: 8px;
         padding: 10px $site-padding;
         padding-right: $site-padding * 2;
         &:before {
@@ -154,6 +235,52 @@
           color: $white;
         }
       }
+      &-description {
+        padding-right: $site-padding * 3;
+        @media only screen and (max-width: 1199px) {
+          padding-right: 0;
+        }
+      }
     }
+  }
+  &-no-image {
+    .banner {
+      &-click {
+        &-article {
+          background-color: $gray-dark;
+          &:hover { background-color: $black; }
+        }
+      }
+      &-image {
+        display: none;
+      }
+    }
+    @media only screen and (max-width: 767px) {
+      .banner {
+        &-image {
+          display: none;
+        }
+        &-wrapper {
+          background-color: $white;
+          @media only screen and (max-width: 767px) {
+            padding-bottom: $site-padding;
+          }
+        }
+        &-subtitle { color: $brand-color; }
+        &-title { color: $black; }
+        &-text { color: $gray-dark; }
+        &-more {
+          background-color: transparent;
+          color: $black;
+          padding-left: 0;
+          &:before {
+            border-color: $brand-color;
+          }
+        }
+      }
+    }
+  }
+  &.is-hover {
+    background-color: $black;
   }
 }

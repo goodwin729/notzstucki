@@ -8,8 +8,9 @@
     color: $brand-color;
     font-family: $brand-font-bold;
     font-size: 16px;
+    font-weight: normal;
     line-height: 20px;
-    margin: $site-padding 0;
+    margin: 10px 0;
     text-transform: uppercase;
     @media only screen and (max-width: 767px) {
       font-size: 14px;
@@ -20,10 +21,13 @@
     font-family: $brand-font-light;
     font-size: 34px;
     line-height: 40px;
-    margin: $site-padding 0;
+    margin: 10px 0;
     @media only screen and (max-width: 767px) {
       font-size: 26px;
       line-height: 30px;
+    }
+    & + .author-article {
+      margin-top: 0;
     }
   }
   &-subtitle {
@@ -31,16 +35,19 @@
     font-family: $brand-font-light;
     font-size: 24px;
     line-height: 30px;
-    margin: $site-padding 0;
+    margin: 25px 0;
   }
   &-text {
     color: $gray-dark;
     font-family: $brand-font;
     font-size: 14px;
     line-height: 24px;
-    margin: $site-padding 0;
+    margin: 10px 0;
   }
-  &-image {
+  &-image,
+  img {
+    height: auto;
+    margin: $site-padding 0;
     width: 100%;
     @media only screen and (min-width: 768px) and (max-width: 991px) {
       margin-left: -$site-padding;
@@ -57,30 +64,56 @@
   &-back {
     background-color: $brand-color;
     color: $white;
+    display: inline-block;
     font-family: $brand-font-bold;
     font-size: 12px;
+    font-weight: normal;
     line-height: 20px;
-    margin: $site-padding 0;
+    margin-bottom: 25px;
+    min-width: 270px;
     padding: 10px $site-padding * 2;
-    padding-left: $site-padding * 3;
     position: relative;
+    text-align: center;
     text-transform: uppercase;
     @media only screen and (max-width: 767px) {
+      background-color: $white;
       display: block;
-      margin-bottom: $site-padding;
-      width: 100%;
+      margin-bottom: -$site-padding;
+      margin-left: -$site-padding;
+      margin-right: -$site-padding;
+      margin-top: 0;
+      padding-top: 10px;
+      padding-bottom: 40px;
+      text-align: center;
+      z-index: 1;
     }
     &:before {
       content: "";
       border-bottom: 2px solid $white;
       border-left: 2px solid $white;
       height: 8px;
-      left: $site-padding * 2;
+      left: 35px;
       margin-top: -4px;
       position: absolute;
       top: 50%;
       width: 8px;
       @extend .rotate-45;
+      @media only screen and (max-width: 767px) {
+        margin-left: 20px;
+        margin-top: -20px;
+      }
+    }
+    &:after {
+      @media only screen and (max-width: 767px) {
+        content: "";
+        background-color: $brand-color;
+        height: calc(100% - 30px);
+        left: 15px;
+        position: absolute;
+        top: 0;
+        width: calc(100% - 30px);
+        z-index: -1;
+      }
     }
     &:hover {
       background-color: $black;
@@ -97,6 +130,15 @@
     &-item {
       border-top: $gray 1px solid;
       padding: $site-padding 0;
+    }
+    &-mobile {
+      @media only screen and (max-width: 767px) {
+        background-color: $white;
+        margin-left: -15px;
+        margin-right: -15px;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
     }
   }
 }

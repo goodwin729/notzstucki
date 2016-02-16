@@ -1,48 +1,149 @@
-.icon {
+.icon,
+.fa {
   display: inline-block;
   height: $site-padding;
   width: $site-padding;
   @extend .transition-0_5s;
-  &-big {
+  &-big,
+  &-2x .fa {
     height: 20px;
     width: 20px;
   }
-  &-globe { background: url( $img-dir + "/icons/globe.png" ) no-repeat center center;
-    &:hover { background-image: url( $img-dir + "/icons/globe-azure.png" )}
+  &-globe {
+    background: url( $img-dir + "/icons/globe.png" ) no-repeat center center;
+    background-size: 15px;
+    @media only screen and (max-width: 767px) {
+      background-image: url( $img-dir + "/icons/globe-x2.png" );
+    }
+    &:hover {
+      background-image: url( $img-dir + "/icons/globe-azure.png" );
+      @media only screen and (max-width: 767px) {
+        background-image: url( $img-dir + "/icons/globe-azure-x2.png" );
+      }
+    }
   }
   &-nsfounds {
     background: url( $img-dir + "/icons/nsfounds.png" ) no-repeat center center;
+    background-size: 20px;
     width: 20px;
-    &:hover { background-image: url( $img-dir + "/icons/nsfounds-azure.png" ); }
+    @media only screen and (max-width: 767px) {
+      background-image: url( $img-dir + "/icons/nsfounds-x2.png" );
+    }
+    &:hover {
+      background-image: url( $img-dir + "/icons/nsfounds-azure.png" );
+      @media only screen and (max-width: 767px) {
+        background-image: url( $img-dir + "/icons/nsfounds-azure-x2.png" );
+      }
+    }
   }
   &-search {
     background: url( $img-dir + "/icons/search.png" ) no-repeat center center;
-    &:hover { background-image: url( $img-dir + "/icons/search-hover.png" )}
+    background-size: 17px;
+    @media only screen and (max-width: 767px) {
+      background-image: url( $img-dir + "/icons/search-x2.png" );
+    }
+    &:hover {
+      background-image: url( $img-dir + "/icons/search-hover.png" );
+      @media only screen and (max-width: 767px) {
+        background-image: url( $img-dir + "/icons/search-hover-x2.png" );
+      }
+    }
   }
   &-share { background: url( $img-dir + "/icons/share.png" ) no-repeat center center; }
 
 
-  &-facebook { background: url( $img-dir + "/icons/facebook.png" ) no-repeat center center;
-    &:hover { background-image: url( $img-dir + "/icons/facebook-black.png" ); }
+  &-facebook {
+    background: url( $img-dir + "/icons/facebook.png" ) no-repeat center center;
+    background-size: 20px;
+    @media only screen and (max-width: 767px) {
+      background-image: url( $img-dir + "/icons/facebook-x2.png" );
+    }
+    &:hover {
+      background-image: url( $img-dir + "/icons/facebook-black.png" );
+      @media only screen and (max-width: 767px) {
+        background-image: url( $img-dir + "/icons/facebook-black-x2.png" );
+      }
+    }
   }
-  &-googleplus { background: url( $img-dir + "/icons/googleplus.png" ) no-repeat center center;
-    &:hover { background-image: url( $img-dir + "/icons/googleplus-black.png" ); }
+  &-googleplus,
+  &-google-plus {
+    background: url( $img-dir + "/icons/googleplus.png" ) no-repeat center center;
+    background-size: 20px;
+    @media only screen and (max-width: 767px) {
+      background-image: url( $img-dir + "/icons/googleplus-x2.png" );
+    }
+    &:hover {
+      background-image: url( $img-dir + "/icons/googleplus-black.png" );
+      @media only screen and (max-width: 767px) {
+        background-image: url( $img-dir + "/icons/googleplus-black-x2.png" );
+      }
+    }
   }
-  &-instagram { background: url( $img-dir + "/icons/instagram.png" ) no-repeat center center;
-    &:hover { background-image: url( $img-dir + "/icons/instagram-black.png" ); }
+  &-instagram {
+    background: url( $img-dir + "/icons/instagram.png" ) no-repeat center center;
+    background-size: 16px;
+    @media only screen and (max-width: 767px) {
+      background-image: url( $img-dir + "/icons/instagram-x2.png" );
+    }
+    &:hover {
+      background-image: url( $img-dir + "/icons/instagram-black.png" );
+      @media only screen and (max-width: 767px) {
+        background-image: url( $img-dir + "/icons/instagram-black-x2.png" );
+      }
+    }
   }
-  &-linkedin { background: url( $img-dir + "/icons/linkedin.png" ) no-repeat center center;
-    &:hover { background-image: url( $img-dir + "/icons/linkedin-black.png" ); }
+  &-linkedin {
+    background: url( $img-dir + "/icons/linkedin.png" ) no-repeat center center;
+    background-size: 20px;
+    @media only screen and (max-width: 767px) {
+      background-image: url( $img-dir + "/icons/linkedin-x2.png" );
+    }
+    &:hover {
+      background-image: url( $img-dir + "/icons/linkedin-black.png" );
+      @media only screen and (max-width: 767px) {
+        background-image: url( $img-dir + "/icons/linkedin-black-x2.png" );
+      }
+    }
   }
   &-linkedin-logo {
     background: url( $img-dir + "/icons/linkedin-logo.png" ) no-repeat center center;
+    background-size: 61px;
     width: 61px;
-    &:hover { background-image: url( $img-dir + "/icons/linkedin-logo-azure.png" ); }
+    @media only screen and (max-width: 767px) {
+      background-image: url( $img-dir + "/icons/linkedin-logo-x2.png" );
+    }
+    &:hover {
+      background-image: url( $img-dir + "/icons/linkedin-logo-azure.png" );
+      @media only screen and (max-width: 767px) {
+        background-image: url( $img-dir + "/icons/linkedin-logo-azure-x2.png" );
+      }
+    }
   }
-  &-mail { background: url( $img-dir + "/icons/mail.png" ) no-repeat center center;
-    &:hover { background-image: url( $img-dir + "/icons/mail-black.png" ); }
+  &-mail,
+  &-envelope {
+    background: url( $img-dir + "/icons/mail.png" ) no-repeat center center;
+    background-size: 20px;
+    @media only screen and (max-width: 767px) {
+      background-image: url( $img-dir + "/icons/mail-x2.png" );
+    }
+    &:hover {
+      background-image: url( $img-dir + "/icons/mail-black.png" );
+      @media only screen and (max-width: 767px) {
+        background-image: url( $img-dir + "/icons/mail-black-x2.png" );
+      }
+    }
   }
-  &-twitter { background: url( $img-dir + "/icons/twitter.png" ) no-repeat center center;
-    &:hover { background-image: url( $img-dir + "/icons/twitter-black.png" ); }
+  &-twitter {
+    background: url( $img-dir + "/icons/twitter.png" ) no-repeat center center;
+    background-size: 20px;
+    @media only screen and (max-width: 767px) {
+      background-image: url( $img-dir + "/icons/twitter-x2.png" );
+    }
+    &:hover {
+      background-image: url( $img-dir + "/icons/twitter-black.png" );
+      @media only screen and (max-width: 767px) {
+        background-image: url( $img-dir + "/icons/twitter-black-x2.png" );
+      }
+    }
   }
 }

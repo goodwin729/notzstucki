@@ -2,14 +2,22 @@
   margin-bottom: $site-padding / 2;
   margin-top: $site-padding / 2;
   @extend .clearfix;
+  @media only screen and (max-width: 767px) {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
   &-title {
     color: $black;
     display: block;
     font-family: $brand-font-bold;
     font-size: 14px;
+    font-weight: normal;
     line-height: 20px;
     margin: 10px 0;
     text-transform: uppercase;
+    @media only screen and (max-width: 767px) {
+      margin-top: 0;
+    }
   }
   &-list {
     list-style: none;
